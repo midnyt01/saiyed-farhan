@@ -11,7 +11,6 @@ import Link from "next/link";
 import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import MainLogo from "../../assets/sf-white.png";
-import ThemeToggle from "../theme-toggle/theme-toggle";
 
 const Container = styled.div`
   width: 300px;
@@ -21,6 +20,7 @@ const Container = styled.div`
   top: 0;
   right: 0;
   height: 100vh;
+  padding-bottom: 100px;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isSidebarOpen }) =>
     isSidebarOpen ? "translateX(0)" : "translateX(100%)"};
@@ -117,24 +117,24 @@ const Sidebar = () => {
           <Image src={MainLogo} alt="main-logo" width={100} />
         </MainLogoContainer>
         <NavItemContainer>
-          <NavItems>
+          <NavItems onClick={toggleSidebar}>
             <Link href="/">Home</Link>
           </NavItems>
-          <NavItems>
-            <Link href="/">Services</Link>
+          <NavItems onClick={toggleSidebar}>
+            <Link href="/services/branding">Services</Link>
           </NavItems>
-          <NavItems>
-            <Link href="/">Blogs</Link>
+          <NavItems onClick={toggleSidebar}>
+            <Link href="/blogs">Blogs</Link>
           </NavItems>
-          <NavItems>
-            <Link href="/">CaseStudies</Link>
+          <NavItems onClick={toggleSidebar}>
+            <Link href="/casestudies">CaseStudies</Link>
           </NavItems>
         </NavItemContainer>
-        <PoliciesContainer>
+        {/* <PoliciesContainer>
           <Policy>Privacy Policy</Policy>
           <Policy>Terms and Conditions</Policy>
           <Policy>Return and refund policy</Policy>
-        </PoliciesContainer>
+        </PoliciesContainer> */}
         <SocialContainer>
           <Social>
             <FontAwesomeIcon icon={faWhatsapp} size="xl" />

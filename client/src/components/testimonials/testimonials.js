@@ -63,7 +63,7 @@ const TestimoniesWrapper = styled.div`
 `;
 const HR = styled.hr`
 width: 90%;
-margin-right: 30px;
+margin: auto;
 box-sizing: border-box;
 margin-top: 70px;
 `

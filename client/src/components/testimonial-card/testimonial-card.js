@@ -5,6 +5,7 @@ import {
   faQuoteRightAlt,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { Fade } from "react-reveal";
 
 const Container = styled.div`
   width: 280px;
@@ -69,7 +70,8 @@ const ReviewerWork = styled.p`
 
 const TestimonailCard = ({ id }) => {
   return (
-    <Container>
+    <Fade right>
+      <Container>
       <Wrapper>
         <ReviewContainer>
           <Review>
@@ -95,6 +97,7 @@ const TestimonailCard = ({ id }) => {
         </ReviewerContainer>
       </Wrapper>
     </Container>
+    </Fade>
   );
 };
 

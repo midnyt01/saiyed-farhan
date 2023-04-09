@@ -32,10 +32,7 @@ export const ContentProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const blogsArray = [];
-    for (let i = 0; i < Math.min(allBlogs.length, 6); i++) {
-      blogsArray.push(allBlogs[i]);
-    }
+    const blogsArray = allBlogs.slice(0, 4);
     setRecentBlogs(blogsArray);
   }, [allBlogs]);
 
@@ -52,10 +49,8 @@ export const ContentProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const caseStudyArray = [];
-    for (let i = 0; i < Math.min(allCaseStudies.length, 6); i++) {
-      caseStudyArray.push(allCaseStudies[i]);
-    }
+    const caseStudyArray = allCaseStudies.slice(0, 4);
+    
     setRecentCaseStudies(caseStudyArray);
   }, [allCaseStudies]);
 

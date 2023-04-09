@@ -148,11 +148,15 @@ letter-spacing: 0.5px;
 const SocialWrapper = styled.div`
 width: 300px;
 margin: auto;
-  margin-top: auto;
 margin-top: 50px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+svg {
+    cursor: pointer;
+}
+
 `;
 
 const DEFAULT_FORM_FIELD = {

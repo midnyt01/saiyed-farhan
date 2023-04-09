@@ -79,6 +79,17 @@ async function httpGetAllLeadsInfo() {
     return await response.json()
 }
 
+async function httpGetAllCustomersInfo() {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/customers`, {
+        method: "get",
+        headers: {
+            "auth-token": `${adminToken}`
+        }
+    })
+    return await response.json()
+}
+
 export {
     httpCreateAdmin,
     httpLoginAdmin,
@@ -86,4 +97,5 @@ export {
     httpPostCaseStudy,
     httpGetAllCustomersDetails,
     httpGetAllLeadsInfo,
+    httpGetAllCustomersInfo,
 }

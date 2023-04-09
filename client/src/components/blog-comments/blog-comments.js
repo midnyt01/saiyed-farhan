@@ -41,7 +41,7 @@ const FormHeading = styled.div`
 const FormSubHeading = styled.div`
   font-size: 17px;
   letter-spacing: 0.5px;
-  color: lightgray;
+  color: gray;
 `;
 
 const FormCommentArea = styled.textarea`
@@ -52,6 +52,8 @@ const FormCommentArea = styled.textarea`
   font-size: 17px;
   height: 200px;
   background: transparent;
+  border: none;
+  border: 1px solid;
   color: inherit;
   outline: none;
   font-family: inherit;
@@ -76,21 +78,26 @@ const FormInput = styled.input`
   color: inherit;
   font-size: 17px;
   outline: none;
+  border: none;
+  border: 1px solid;
 `;
 
 const SubmitButton = styled.div`
   margin-top: 40px;
   box-sizing: border-box;
   padding: 7px 30px;
-  background: white;
-  color: black;
+  border: 1px solid;
+  border-color:  ${props => props.theme == 'light' ? 'black' : 'white'};
+  background: ${props => props.theme == 'light' ? 'transparent' : 'black'};
+  color: ${props => props.theme == 'light' ? 'black' : 'white'};
   width: fit-content;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.5px;
   cursor: pointer;
   &:hover {
-    background: #e5e5e5;
+    background: ${props => props.theme == 'light' ? 'black' : 'white'};
+  color: ${props => props.theme == 'light' ? 'white' : 'black'};
   }
 `;
 
@@ -98,15 +105,15 @@ const LoadMoreButton = styled.div`
   margin-top: 20px;
   box-sizing: border-box;
   padding: 7px 30px;
-  background: white;
-  color: black;
+  background: ${props => props.theme == 'light' ? 'black' : 'white'};
+  color: ${props => props.theme == 'light' ? 'white' : 'black'};
   width: fit-content;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.5px;
   cursor: pointer;
   &:hover {
-    background: #e5e5e5;
+    background: ${props => props.theme == 'light' ? '#353535' : '#dbdbdb'};
   }
 `;
 
@@ -127,7 +134,7 @@ const BlogComments = ({ BlogId }) => {
   const [numCommentsToShow, setNumCommentsToShow] = useState(2);
   const [isLoadMore, setIsLoadMore] = useState(false);
 
-  const {addNotifiction, userInfo} = useContext(GlobalContext)
+  const {addNotifiction, userInfo, theme} = useContext(GlobalContext)
 
   useEffect(() => {
     async function getAllComments() {
@@ -214,7 +221,7 @@ const BlogComments = ({ BlogId }) => {
           })}
         </CommentCardContainer>
         {allComments.length >= 3 && (
-          <LoadMoreButton onClick={handleLoadMore}>
+          <LoadMoreButton theme={theme} onClick={handleLoadMore}>
             {isLoadMore ? "Show Less" : "Load More"}
           </LoadMoreButton>
         )}
@@ -230,7 +237,6 @@ const BlogComments = ({ BlogId }) => {
             name="Comment"
             value={values.Comment}
             onChange={handleChange}
-            onBlur={handleBlur}
             error={touched.Comment && Boolean(errors.Comment)}
           />
           {touched.Comment && errors.Comment && (
@@ -245,7 +251,6 @@ const BlogComments = ({ BlogId }) => {
               type="text"
               value={values.Name}
               onChange={handleChange}
-              onBlur={handleBlur}
               error={touched.Name && Boolean(errors.Name)}
             />
             {touched.Name && errors.Name && (
@@ -259,7 +264,6 @@ const BlogComments = ({ BlogId }) => {
               type="email"
               value={values.Email}
               onChange={handleChange}
-              onBlur={handleBlur}
               error={touched.Email && Boolean(errors.Email)}
             />
             {touched.Email && errors.Email && (
@@ -267,7 +271,7 @@ const BlogComments = ({ BlogId }) => {
             )}
           </div>
         </FormInputContainer>
-        <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
+        <SubmitButton theme={theme} onClick={handleSubmit}>Submit</SubmitButton>
       </CommentForm>
     </Container>
   );

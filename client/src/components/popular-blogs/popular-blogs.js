@@ -55,7 +55,7 @@ const ActionButton = styled.div`
     background: #95DE4C;
     color: white;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     width: max-content;
     margin: auto;
     margin-top: 50px;
@@ -146,10 +146,10 @@ const PopularBlogs = () => {
   return (
     <Container>
         <Wrapper>
-            <Title>Popular Blogs</Title>
+            <Title>Recent Blogs</Title>
             <PopularBlogsContainer>
             {
-                recentBlogs.map(blog => {
+                recentBlogs.slice(0, 3).map(blog => {
                     return (
                             <PopularBlogCard key={blog.BlogId} blog={blog} />
                     )

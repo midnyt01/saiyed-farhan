@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Slide } from "react-reveal";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -129,11 +131,19 @@ margin-top: 40px;
 
 
 const Services = () => {
+
+  const router = useRouter();
+
+  const handleOnClick = () => {
+    router.push('/services/branding')
+  }
+
   return (
     <Container>
       <Wrapper>
         <Title>services we provide</Title>
         <ServicesContainer>
+          <Slide bottom>
           <ServiceCard>
             <ServiceLogo><FontAwesomeIcon icon={faLaptop} size="4x" /></ServiceLogo>
             <ServiceTitle>Branding</ServiceTitle>
@@ -154,11 +164,13 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/branding"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer'}} size="xl" /></Link>
+              <Link href="/services/branding"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
+          </Slide>
 
           {/* Service 2  */}
+          <Slide bottom>
           <ServiceCard>
             <ServiceLogo><FontAwesomeIcon icon={faChartLine} size="4x" /></ServiceLogo>
             <ServiceTitle>Sales</ServiceTitle>
@@ -179,11 +191,13 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/sales"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer'}} size="xl" /></Link>
+              <Link href="/services/sales"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
+          </Slide>
 
           {/* Service 3 */}
+          <Slide bottom>
           <ServiceCard>
             <ServiceLogo><FontAwesomeIcon icon={faTrafficLight} size="4x"/></ServiceLogo>
             <ServiceTitle>Traffic</ServiceTitle>
@@ -204,14 +218,17 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/traffic"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer'}} size="xl" /></Link>
+              <Link href="/services/traffic"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
+          </Slide>
         </ServicesContainer>
         <ActionContainer>
-            <Action>
+            <Slide left>
+            <Action onClick={handleOnClick} >
                 <FontAwesomeIcon icon={faArrowRightLong} size="2x" style={{fontWeight: 'bold'}} />
             </Action>
+            </Slide>
         </ActionContainer>
         <HR />
       </Wrapper>

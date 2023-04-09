@@ -153,7 +153,7 @@ const Navbar = () => {
         </NavList>
         <ExtraItemContainer>
           <ExtraItems>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </ExtraItems>
           <ExtraItems onClick={toggleProfileInfoTab}>
             <Image

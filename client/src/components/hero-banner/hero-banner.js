@@ -11,6 +11,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Link from "next/link";
 import Image from "next/image";
+import { Slide } from "react-reveal";
 const Container = styled.div`
 width: 100%;
 margin-top: 30px;
@@ -37,6 +38,7 @@ const SliderContainer = styled.div`
 const HeroBannerContainer = styled.div`
   width: 100%;
   text-align: right;
+  overflow-x: hidden;
 `;
 
 const Title = styled.h1`
@@ -99,10 +101,14 @@ const HeroBanner = () => {
           </Slider>
         </SliderContainer> */}
         <HeroBannerContainer>
+          <Slide right duration={1500}>
             <Title>SAIYED</Title>
             <br />
             <Title>FARHAN</Title>
+            </Slide>
+            <Slide left delay={500}>
             <Subtitle>Marketing Correctly</Subtitle>
+            </Slide>
         </HeroBannerContainer>
         <HR />
       </Wrapper>

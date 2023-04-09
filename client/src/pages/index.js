@@ -25,12 +25,12 @@ export default function Home() {
         
       </Head>
       <HeroBanner />
+      <Testimonials />
       <Services />
       <CaseStudies />
       <Featured />
       <PopularBlogs />
       <AboutMe />
-      <Testimonials />
       <ContactMeForm />
     </>
   )

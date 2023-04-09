@@ -1,22 +1,22 @@
 export const  CustomerColumn = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'UserId', headerName: 'CustomerID', width: 90 },
   {
-    field: 'firstName',
+    field: 'FirstName',
     headerName: 'First name',
     width: 150,
     editable: false,
   },
   {
-    field: 'lastName',
+    field: 'LastName',
     headerName: 'Last name',
     width: 150,
     editable: false,
   },
   {
-    field: 'age',
-    headerName: 'Age',
+    field: 'Email',
+    headerName: 'Email',
     type: 'number',
-    width: 110,
+    width: 200,
     editable: false,
   },
   {
@@ -27,7 +27,7 @@ export const  CustomerColumn = [
     width: 220,
     editable: false,
     valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+      `${params.row.FirstName || ''} ${params.row.LastName || ''}`,
   },
 
 ];

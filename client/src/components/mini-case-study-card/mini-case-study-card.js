@@ -23,7 +23,7 @@ display: flex;
 column-gap: 30px;
 font-size: 15px;
 margin-top: 8px;
-color: lightgray;
+color: gray;
 `;
 
 const HR = styled.hr`

@@ -142,8 +142,7 @@ async function postCaseStudy(caseStudyDetails, callback) {
 
 //FirstName, CustomerId, PhoneNumber, AltNumber, Country, State, City, Pincode, Landmark, BuildingName, AddressType
 async function getAllCustomers(callback) {
-  let sql = `SELECT * FROM customers
-    JOIN customer_addresses ON customers.CustomerId = customer_addresses.CustomerId`;
+  let sql = `SELECT UserId, FirstName, LastName, Email FROM users`;
   db.query(sql, function (err, result) {
     if (err) {
       callback(err, null);

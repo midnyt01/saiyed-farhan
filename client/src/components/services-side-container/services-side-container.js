@@ -1,4 +1,6 @@
+import { GlobalContext } from "@/context/global.context";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 import styled from "styled-components"
 
 
@@ -44,14 +46,14 @@ cursor: pointer;
 
 const ActiveServiceItem = styled.div`
     width: 90%;
-    margin: 15px 0;
+    margin: 10px 0;
     letter-spacing: 0.7px;
     padding: 7px 10px;
     box-sizing: border-box;  
     font-weight: 600; 
     cursor: pointer;
-    background: white;
-    color: black;
+    background: ${(props) => (props.theme == "light" ? "black" : "white")};
+    color: ${(props) => (props.theme == "light" ? "white" : "black")};
     border-radius: 7px;
 `;
 
@@ -69,6 +71,7 @@ font-size: 25px;
 text-align: center;
 font-weight: bold;
 letter-spacing: 0.5px;
+color: white;
 `;
 
 const TouchButton = styled.div`
@@ -92,11 +95,12 @@ const ALL_SERVICES = ["branding","sales", "traffic", "leads"];
 const ServicesSideContainer = ({activeService}) => {
 
     const router = useRouter();
+    const {theme} = useContext(GlobalContext)
 
     const handleTouchButtonClick = () => {
         router.push('/')
         setTimeout(() => {
-            window.scrollTo({ top: 6750, behavior: 'smooth' })
+            window.scrollTo({ top: 6000, behavior: 'smooth' })
         }, 500);
     }
 
@@ -112,7 +116,7 @@ const ServicesSideContainer = ({activeService}) => {
 
                         if (service == activeService) {
                             return (
-                                <ActiveServiceItem>
+                                <ActiveServiceItem theme={theme}>
                                     {service}
                                 </ActiveServiceItem>
                             )

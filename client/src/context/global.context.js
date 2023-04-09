@@ -5,7 +5,7 @@ import Greenface from "../assets/angry-bird-face-green.jpg"
 import Yellowface from "../assets/angry-bird-face-yellow.jpg"
 import Blackface from "../assets/angry-bird-face-black.jpg"
 
-const USER_ICON_ARRAY = [Redface, Blueblue, Greenface, Yellowface,Blackface]
+const USER_ICON_ARRAY = [Redface, Blueblue, Yellowface,Blackface]
 
 export const GlobalContext = createContext({
   theme: null,
@@ -28,7 +28,7 @@ export const GlobalContext = createContext({
 
 export const GlobalProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [notification, setNotification] = useState([]);
   const [isProfileInfoOpen, setIsProfileInfoOpen] = useState(false);
   const [isServiceCardOpen, setIsServiceCardOpen] = useState(false);

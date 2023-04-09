@@ -2,9 +2,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import styled from 'styled-components';
-import { CustomerColumn, CustomerRows } from '../../../tabledata';
+import { CustomerColumn } from '../../../tabledata';
 import { useState } from 'react';
 import ConfirmDelete from '../delete-confirm/delete-confirm.component';
+import { useContext } from 'react';
+import { CustomersContext } from '../../../context/admin/customers.context';
 
 const Container = styled.div`
 width: 100%;
@@ -69,11 +71,9 @@ const DeleteCell = styled.div`
 `
 
 const AdminCustomer = () => {
-  // const { customersList } = React.useContext(CustomersContext);
+  const { customerRows, setCustomerRows } = useContext(CustomersContext);
+  console.log({customerRows})
 
-
-
-  const [data, setData] = useState(CustomerRows);
   const [deleteId, setDeleteId] = useState(null);
   const [confirmDelete, setIsConfirmDelete] = useState(false);
 
@@ -84,7 +84,7 @@ const AdminCustomer = () => {
   };
 
   const handleConfirmDelete = () => {
-    setData(data.filter((item) => item.id !== deleteId));
+    setCustomerRows(customerRows.filter((item) => item.UserId !== deleteId));
     setIsConfirmDelete(false);
   }
   const handleCancleDelete = () => {
@@ -100,7 +100,7 @@ const AdminCustomer = () => {
         return (
           <DeleteCell>
             <div className="deleteButton"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row.UserId)}
             >
               Delete
             </div>
@@ -119,7 +119,8 @@ const AdminCustomer = () => {
         </TitleContainer>
         <StyledBox sx={{ height: 630, width: "100%" }}>
           <StyledDataGrid
-            rows={data}
+            rows={customerRows}
+            getRowId={(row) => row.UserId}
             columns={CustomerColumn.concat(actionColumn)}
             initialState={{
               pagination: {

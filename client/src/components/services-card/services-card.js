@@ -1,6 +1,14 @@
 import { GlobalContext } from "@/context/global.context";
 import { makeid } from "@/helper-functions";
-import { faArrowRightFromBracket, faClose, faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightFromBracket,
+  faChartLine,
+  faClose,
+  faPlaneUp,
+  faPowerOff,
+  faTrafficLight,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -10,8 +18,8 @@ import styled from "styled-components";
 const Container = styled.div`
   background: white;
   position: absolute;
-  right: 600px;
-  max-width: 150px;
+  right: 560px;
+  width: 180px;
   max-height: 250px;
   top: ${(props) => props.top};
   visibility: ${(props) => props.visibility};
@@ -28,10 +36,10 @@ const Container = styled.div`
 `;
 
 const ServicesWrapper = styled.div`
-width: 100%;
-padding: 10px 25px;
-text-transform: capitalize;
-font-size: 19px;
+  width: 100%;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  font-size: 19px;
 `;
 
 const ServiceItem = styled.div`
@@ -41,21 +49,40 @@ const ServiceItem = styled.div`
   width: 100px;
   color: #6b6b6b;
   cursor: pointer;
+  display: flex;
+  column-gap: 13px;
+  align-items: center;
   &:hover {
     color: black;
   }
 `;
 
+const ServiceName = styled.span``
 
-const ALL_SERVICES = ["branding","sales", "traffic", "leads"];
+// const ALL_SERVICES = ["branding","sales", "traffic", "leads"];
+const ALL_SERVICES = [
+  {
+    name: "branding",
+    icon: faPlaneUp,
+  },
+  {
+    name: "sales",
+    icon: faChartLine,
+  },
+  {
+    name: "traffic",
+    icon: faTrafficLight,
+  },
+  {
+    name: "leads",
+    icon: faUsers,
+  }
+];
 
 const ServicesCard = () => {
   const router = useRouter();
 
-  const {
-    isServiceCardOpen,
-    setIsServiceCardOpen,
-  } = useContext(GlobalContext);
+  const { isServiceCardOpen, setIsServiceCardOpen } = useContext(GlobalContext);
 
   return (
     <Container
@@ -63,22 +90,25 @@ const ServicesCard = () => {
       opacity={`${isServiceCardOpen ? "1" : "0"}`}
       visibility={`${isServiceCardOpen ? "visible" : "hidden"}`}
     >
-
-    <ServicesWrapper>
-        {
-            ALL_SERVICES.map((service) => {
-                return (
-                    <ServiceItem key={service} onClick={() => {
-                        router.push(`/services/${service}`)
-                        setIsServiceCardOpen(false)
-                    }} >
-                        {service}
-                    </ServiceItem>
-                )
-            })
-        }
-    </ServicesWrapper>
-
+      <ServicesWrapper>
+        {ALL_SERVICES.map((service) => {
+          const {name, icon} = service
+          return (
+            <ServiceItem
+              key={name}
+              onClick={() => {
+                router.push(`/services/${name}`);
+                setIsServiceCardOpen(false);
+              }}
+            >
+              <FontAwesomeIcon icon={icon} style={{width: '20px'}} />
+              <ServiceName>
+              {name}
+              </ServiceName>
+            </ServiceItem>
+          );
+        })}
+      </ServicesWrapper>
     </Container>
   );
 };

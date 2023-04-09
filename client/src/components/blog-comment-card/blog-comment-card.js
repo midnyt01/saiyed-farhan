@@ -27,7 +27,12 @@ const UserImageContainer = styled.div`
   }
 `;
 
-const UserImage = styled.div``;
+const UserImage = styled.div`
+svg {
+  background: ${props => props.theme == 'light' ? 'black' : 'white'};
+  color: ${props => props.theme == 'light' ? 'white' : 'black'};
+}
+`;
 const UserInfoContainer = styled.div`
   width: 100%;
 `;
@@ -42,7 +47,7 @@ const UserName = styled.div`
 
 const UserInfo = styled.div`
   font-size: 15px;
-  color: lightgray;
+  color: gray;
 `;
 
 const CommentBody = styled.div`
@@ -81,6 +86,8 @@ const ReplyName = styled.input`
   padding: 5px 10px;
   color: inherit;
   outline: none;
+  border: none;
+  border: 1px solid;
   @media (min-width: 800px) {
     width: 40%;
   }
@@ -94,6 +101,8 @@ const ReplyText = styled.textarea`
   color: inherit;
   outline: none;
   font-family: inherit;
+  border: none;
+  border: 1px solid;
   @media (min-width: 800px) {
     width: 70%;
   }
@@ -109,13 +118,16 @@ const ReplyActionContainer = styled.div`
 const SubmitReply = styled.span`
   padding: 5px 25px;
   border: 1px solid;
+  border-color:  ${props => props.theme == 'light' ? 'black' : 'white'};
+  background: ${props => props.theme == 'light' ? 'white' : 'black'};
+  color: ${props => props.theme == 'light' ? 'black' : 'white'};
   width: fit-content;
   font-weight: 500;
   letter-spacing: 0.8px;
   cursor: pointer;
   &:hover {
-    background: white;
-    color: black;
+    background: ${props => props.theme == 'light' ? 'black' : 'white'};
+  color: ${props => props.theme == 'light' ? 'white' : 'black'};
   }
 `;
 
@@ -138,9 +150,9 @@ const ReplyCard = styled.div`
 
 const ReplyUserImage = styled.div`
   svg {
+  background: ${props => props.theme == 'light' ? 'black' : 'white'};
+  color: ${props => props.theme == 'light' ? 'white' : 'black'};
     padding: 4px 6px;
-    color: black;
-    background: white;
     border-radius: 50%;
     margin-top: 10px;
   }
@@ -177,7 +189,7 @@ const BlogCommentCard = ({ comment }) => {
   const [allReplies, setAllReplies] = useState([]);
   const [isReplyFormOpen, setIsReplyCardOpen] = useState(false);
 
-  const {userInfo, addNotifiction} = useContext(GlobalContext)
+  const {userInfo, addNotifiction, theme} = useContext(GlobalContext)
 
   useEffect(() => {
     async function getAllReplies() {
@@ -238,7 +250,7 @@ const BlogCommentCard = ({ comment }) => {
     <Container>
       <CommentCard>
         <UserImageContainer>
-          <UserImage>
+          <UserImage theme={theme}>
             <FontAwesomeIcon icon={faUser} size="2xl" />
           </UserImage>
         </UserImageContainer>
@@ -262,7 +274,6 @@ const BlogCommentCard = ({ comment }) => {
               type="text"
               value={values.Name}
               onChange={handleChange}
-              onBlur={handleBlur}
               error={touched.Name && Boolean(errors.Name)}
             />
             {touched.Name && errors.Name && (
@@ -275,7 +286,6 @@ const BlogCommentCard = ({ comment }) => {
                 name="Comment"
                 value={values.Comment}
                 onChange={handleChange}
-                onBlur={handleBlur}
                 error={touched.Comment && Boolean(errors.Comment)}
               />
               {touched.Comment && errors.Comment && (
@@ -283,7 +293,7 @@ const BlogCommentCard = ({ comment }) => {
               )}
             </div>
             <ReplyActionContainer>
-              <SubmitReply onClick={handleSubmit} >Submit</SubmitReply>
+              <SubmitReply theme={theme} onClick={handleSubmit} >Submit</SubmitReply>
               <HideOption onClick={hideReplyForm}>Hide</HideOption>
             </ReplyActionContainer>
           </ReplyForm>
@@ -294,7 +304,7 @@ const BlogCommentCard = ({ comment }) => {
           const { Name, ReplyId, Comment } = reply;
           return (
             <ReplyCard key={ReplyId}>
-              <ReplyUserImage>
+              <ReplyUserImage theme={theme}>
                 <FontAwesomeIcon icon={faUser} size="xl" />
               </ReplyUserImage>
               <ReplyUserWrapper>

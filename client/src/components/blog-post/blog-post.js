@@ -2,9 +2,10 @@ import { convertUnixToDM } from '@/helper-functions';
 import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components';
 import BlogComments from '../blog-comments/blog-comments';
+import { GlobalContext } from '@/context/global.context';
 
 const Container = styled.div`
     flex: 8;
@@ -93,6 +94,20 @@ const BlogContent = styled.div`
     }
 `
 
+
+const Category = styled.div`
+padding: 5px 15px;
+border: 1px solid;
+border-radius: 5px;
+text-transform: capitalize;
+cursor: pointer;
+transition: all 0.15s ease;
+/* &:hover {
+    background: white;
+    color: black;
+} */
+`;
+
 const CategoriesContainer = styled.div`
     width: 95%;
     margin: auto;
@@ -102,20 +117,15 @@ const CategoriesContainer = styled.div`
     row-gap: 20px;
     column-gap: 20px;
     font-size: 18px;
+
+    div {
+        &:hover {
+            background: ${props => props.theme == 'light' ? 'black' : 'white'};
+            color: ${props => props.theme == 'light' ? 'white' : 'black'};
+        }
+    }
 `
 
-const Category = styled.div`
-padding: 5px 15px;
-border: 1px solid white;
-border-radius: 5px;
-text-transform: capitalize;
-cursor: pointer;
-transition: all 0.15s ease;
-&:hover {
-    background: white;
-    color: black;
-}
-`;
 
 
 const BlogPost = ({blog}) => {
@@ -132,6 +142,9 @@ const BlogPost = ({blog}) => {
 
         const { date, month } = convertUnixToDM(CreatedAt);
         const newCategories = JSON.parse(Categories);
+
+        const {theme} = useContext(GlobalContext)
+
   return (
     <Container>
         <Head>
@@ -150,7 +163,7 @@ const BlogPost = ({blog}) => {
                     <BlogInfo>{date + " " + month}</BlogInfo>
                     <BlogInfo>{ReadTime} min Read</BlogInfo>
                 </BlogInfoContainer>
-                <AuthorName href="/">
+                <AuthorName href="/saiyed-farhan">
                     By Saiyed Farhan
                 </AuthorName>
             </BlogHeadContainer>
@@ -158,7 +171,7 @@ const BlogPost = ({blog}) => {
             <BlogContent>
                 <div dangerouslySetInnerHTML={{__html: Content}}></div>
             </BlogContent>
-        <CategoriesContainer>
+        <CategoriesContainer theme={theme}>
             {
                 newCategories.map((cate) => {
                     return (

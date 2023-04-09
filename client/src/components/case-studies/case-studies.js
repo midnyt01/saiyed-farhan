@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { ContentContext } from "@/context/content.context";
+import Link from "next/link";
 
 const Container = styled.div`
     width: 90%;
@@ -53,13 +54,16 @@ const ActionButton = styled.div`
     background: #95DE4C;
     color: white;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     width: max-content;
     margin: auto;
     margin-top: 50px;
     border-radius: 20px;
     text-transform: uppercase;
     cursor: pointer;
+    a {
+        color: white;
+    }
 `
 const HR = styled.hr`
 width: 90%;
@@ -131,7 +135,7 @@ const CaseStudies = () => {
             <Title>Some Case studies</Title>
             <CaseStudiesContainer>
             {
-                recentCaseStudies.map((study) => {
+                recentCaseStudies.slice(0, 3).map((study) => {
                     return (
                         <div key={study.CaseStudyId} >
                             <CaseStudyCard study={study} />
@@ -141,7 +145,7 @@ const CaseStudies = () => {
             }
             </CaseStudiesContainer>
             <ActionButton>
-                More Case Studies
+            <Link href="/casestudies">More Case Studies</Link>
                 <FontAwesomeIcon icon={faChevronRight} style={{marginLeft: '10px'}} />
             </ActionButton>
             <HR/>

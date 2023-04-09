@@ -3,6 +3,7 @@ import MainLogo from "../../assets/sf-white.png"
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import Link from "next/link";
 
 
 const Container = styled.div`
@@ -77,12 +78,13 @@ const LinkHeader = styled.div`
 letter-spacing: 0.5px;
 `;
 
-const LinkItem = styled.div`
+const LinkItem = styled(Link)`
 font-size: 16px;
-color: lightgray;
+color: lightgray !important;
 margin: 10px 0;
 letter-spacing: 0.5px;
 cursor: pointer;
+display: block;
 `;
 
 const NewsletterInput = styled.input`
@@ -128,41 +130,42 @@ const Footer = () => {
                 <LogoContainer>
                     <Image src={MainLogo} alt="saiyed farhan" width={100} />
                     <LogoTitle>Saiyed<br /> Farhan</LogoTitle>
-                    <LinkItem>
+                    <LinkItem href=""> 
                         Lorem ipsum dolore sit amet, consectetur
                     </LinkItem>
                 </LogoContainer>
                 <div>
                     <FontAwesomeIcon icon={faCopyright} />
-                    <LinkItem>Terms & Conditions</LinkItem>
+                    <LinkItem href="/"> Terms & Conditions</LinkItem>
                 </div>
             </MainContainer>
             <ExtraLinksContainer>
                 <SectionWrapper>
                     <LinkHeader>Quick Links</LinkHeader>
-                    <LinkItem>About Me</LinkItem>
-                    <LinkItem>Case Studies</LinkItem>
-                    <LinkItem>Blogs</LinkItem>
-                    <LinkItem>Services</LinkItem>
-                    <LinkItem>Contact Me</LinkItem>
+                    <LinkItem href="/saiyed-farhan"> About Me</LinkItem>
+                    <LinkItem href="/casestudies"> Case Studies</LinkItem>
+                    <LinkItem href="/blogs"> Blogs</LinkItem>
+                    <LinkItem href="services/branding"> Services</LinkItem>
+                    <LinkItem href="/"> Contact Me</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
                     <LinkHeader>Services</LinkHeader>
-                    <LinkItem>Google Ads</LinkItem>
-                    <LinkItem>Meta Ads</LinkItem>
-                    <LinkItem>Linkedln Ads</LinkItem>
+                    <LinkItem href="/services/branding"> Branding</LinkItem>
+                    <LinkItem href="/services/sales"> Sales</LinkItem>
+                    <LinkItem href="/services/traffic"> Traffic</LinkItem>
+                    <LinkItem href="/services/leads"> Leads</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
                     <LinkHeader>More Servies</LinkHeader>
-                    <LinkItem>LOCAL SEO</LinkItem>
-                    <LinkItem>SERP SEO</LinkItem>
+                    <LinkItem href="/services/traffic"> LOCAL SEO</LinkItem>
+                    <LinkItem href="/services/traffic"> SERP SEO</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
                     <LinkHeader>Policies</LinkHeader>
-                    <LinkItem>Terms & Conditions</LinkItem>
+                    <LinkItem href="/"> Terms & Conditions</LinkItem>
                 </SectionWrapper>
 
                 <NewsletterWrapper>
@@ -174,7 +177,7 @@ const Footer = () => {
             </ExtraLinksContainer>
         </Wrapper>
         <HR />
-        <LinkItem style={{width: '85%', margin: 'auto', marginTop: '20px'}} >Design & Developed by Nitrosk- Web & AI Solutions</LinkItem>
+        <LinkItem href="/" style={{width: '85%', margin: 'auto', marginTop: '20px'}} >Design & Developed by Nitrosk- Web & AI Solutions</LinkItem>
     </Container>
   )
 }
