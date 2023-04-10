@@ -31,7 +31,7 @@ const BlogPage = (props) => {
 
 export async function getServerSideProps({ params }) {
   const { slug } = params;
-  let response = await fetch(`http://localhost:8000/customer/blogs/${slug}`);
+  let response = await fetch(`https://api.saiyedfarhan.com/customer/blogs/${slug}`);
   let blogData = await response.json();
   return { props: blogData };
 }

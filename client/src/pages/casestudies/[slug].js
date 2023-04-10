@@ -31,7 +31,7 @@ const CaseStudyPage = (props) => {
 
 export async function getServerSideProps({ params }) {
   const { slug } = params;
-  let response = await fetch(`http://localhost:8000/customer/casestudies/${slug}`);
+  let response = await fetch(`https://api.saiyedfarhan.com/customer/casestudies/${slug}`);
   let caseStudyData = await response.json();
   return { props: caseStudyData };
 }
