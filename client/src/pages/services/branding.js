@@ -1,5 +1,6 @@
 import BrandingComponent from "@/components/services-component/branding-component";
 import ServicesSideContainer from "@/components/services-side-container/services-side-container";
+import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,10 +16,15 @@ const BrandingPage = () => {
 
 
   return (
+    <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"></meta>
+    </Head>
     <Container>
       <BrandingComponent />
       <ServicesSideContainer activeService={"branding"} />
     </Container>
+    </>
   );
 };
 

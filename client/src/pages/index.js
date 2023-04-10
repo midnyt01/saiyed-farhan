@@ -17,10 +17,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Saiyed Farhan</title>
+        {/* <title>Saiyed Farhan</title>
         <meta name="keywords" content={metaKeywords} />
         <meta name="description" content={metaDesc} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
+        <meta name="robots" content="noindex,nofollow"></meta>
         <link rel="icon" href="/favicon.ico" />
         
       </Head>

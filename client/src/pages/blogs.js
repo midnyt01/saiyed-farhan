@@ -1,5 +1,6 @@
 import AllBlogs from "@/components/all-blogs/all-blogs";
 import BlogSideContainer from "@/components/blog-side-container/blog-side-container";
+import Head from "next/head";
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -13,10 +14,15 @@ const Container = styled.div`
 
 const Blogs = () => {
   return (
+    <>
+    <Head>
+      <meta name="robots" content="noindex,nofollow" />
+    </Head>
     <Container>
       <AllBlogs />
       <BlogSideContainer />
     </Container>
+    </>
   )
 }
 

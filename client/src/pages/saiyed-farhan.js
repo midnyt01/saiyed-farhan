@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
@@ -57,6 +58,10 @@ const AboutContainer = styled.div`
 
 const SaiyedFarhan = () => {
   return (
+    <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"></meta>
+    </Head>
     <Container>
         <Heading>Saiyed Farhan</Heading>
       <Wrapper>
@@ -86,6 +91,7 @@ const SaiyedFarhan = () => {
         </AboutContainer>
       </Wrapper>
     </Container>
+    </>
   );
 };
 

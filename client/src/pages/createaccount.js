@@ -1,11 +1,10 @@
-import React from 'react';  
+import React from "react";
 import MainLogo from "../assets/sf-white.png";
 import MainLogo2 from "../assets/sf-black.png";
-import { useState } from 'react';
-import { useContext } from 'react';
-import { useFormik } from 'formik';
-import styled from 'styled-components';
-
+import { useState } from "react";
+import { useContext } from "react";
+import { useFormik } from "formik";
+import styled from "styled-components";
 
 import {
   Button,
@@ -18,107 +17,125 @@ import {
   CssBaseline,
   Checkbox,
   FormControlLabel,
-} from '@mui/material';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { LoginSchema, RegistrationSchema } from '@/schema/schema.index';
-import { GlobalContext } from '@/context/global.context';
-import { httpCreateUserAccount, httpLogInUser } from '@/utils/api';
-import { makeid } from '@/helper-functions';
+} from "@mui/material";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { LoginSchema, RegistrationSchema } from "@/schema/schema.index";
+import { GlobalContext } from "@/context/global.context";
+import { httpCreateUserAccount, httpLogInUser } from "@/utils/api";
+import { makeid } from "@/helper-functions";
+import Head from "next/head";
 
 const StyledBox = styled(Box)`
-    width: 80%;
+  width: 80%;
 
-    div{
-        color: inherit;
-    }
-    label {
-        color: inherit;
-        z-index: 2;
-    }
-    input {
-        color: inherit;
-    }
-    fieldset {
-        border-color: ${props => props.theme == "light" ? 'black' : 'lightgrey'};
+  div {
+    color: inherit;
+  }
+  label {
+    color: inherit;
+    z-index: 2;
+  }
+  input {
+    color: inherit;
+  }
+  fieldset {
+    border-color: ${(props) =>
+      props.theme == "light" ? "black" : "lightgrey"};
+  }
 
-    }
-    
-    svg {
-        color: ${props => props.theme == "light" ? 'black' : 'white'};
-    }
+  svg {
+    color: ${(props) => (props.theme == "light" ? "black" : "white")};
+  }
 
-    @media (min-width: 800px) {
-        width: 100%;
-    }
-`
-
-const StyledTypography = styled(Typography)`
-    margin-top: 20px;
+  @media (min-width: 800px) {
+    width: 100%;
+  }
 `;
 
+const StyledTypography = styled(Typography)`
+  margin-top: 20px;
+`;
 
 const defaultFormFields = {
-    FirstName: "",
-    LastName: "",
-    Email: "",
-    Password: "",
-    Confirm_Password: "",
-  };
+  FirstName: "",
+  LastName: "",
+  Email: "",
+  Password: "",
+  Confirm_Password: "",
+};
 
 const CreateUserAccount = () => {
-    const route = useRouter()
+  const route = useRouter();
 
-    const {theme, isLogin, setIsLogin, addNotifiction} = useContext(GlobalContext)
+  const { theme, isLogin, setIsLogin, addNotifiction } =
+    useContext(GlobalContext);
 
-
-    const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
-        initialValues: defaultFormFields,
-        validationSchema: RegistrationSchema,
-        onSubmit : async (values) => {
-            const {FirstName, LastName, Email, Password} = values;
-            const data = await httpCreateUserAccount({FirstName, LastName, Email, Password})
-            console.log({data})
-            if (data.success) {
-            //save auth token and redirct to home
-                localStorage.setItem('admin', data.authToken)
-                //set use name and email in local storage
-                setIsLogin(true)
-                route.push('/')
-                const {userInfo} = data
-                localStorage.setItem('sf-user-name', userInfo.Name)
-                localStorage.setItem('sf-user-email', userInfo.Email)
-                setTimeout(() => {
-                    addNotifiction(makeid(5), "success", "You has been created in Successfully")
-                }, 500);
-            } else {
-                addNotifiction(makeid(5), "danger", data)
-            }
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: defaultFormFields,
+      validationSchema: RegistrationSchema,
+      onSubmit: async (values) => {
+        const { FirstName, LastName, Email, Password } = values;
+        const data = await httpCreateUserAccount({
+          FirstName,
+          LastName,
+          Email,
+          Password,
+        });
+        console.log({ data });
+        if (data.success) {
+          //save auth token and redirct to home
+          localStorage.setItem("admin", data.authToken);
+          //set use name and email in local storage
+          setIsLogin(true);
+          route.push("/");
+          const { userInfo } = data;
+          localStorage.setItem("sf-user-name", userInfo.Name);
+          localStorage.setItem("sf-user-email", userInfo.Email);
+          setTimeout(() => {
+            addNotifiction(
+              makeid(5),
+              "success",
+              "You has been created in Successfully"
+            );
+          }, 500);
+        } else {
+          addNotifiction(makeid(5), "danger", data);
         }
-    })
+      },
+    });
 
-
-    return (
-        <Container component="main" maxWidth="xs">
-          <CssBaseline />
-          <Box
-            sx={{
-              marginTop: 8,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
+  return (
+    <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {theme == "dark" ? (
+            <Image src={MainLogo} alt="Saiyed Farhan" width={150} />
+          ) : (
+            <Image src={MainLogo2} alt="Saiyed Farhan" width={150} />
+          )}
+          <StyledTypography component="h1" variant="h5">
+            Create New Account
+          </StyledTypography>
+          <StyledBox
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
           >
-            {theme == "dark" ? (
-              <Image src={MainLogo} alt="Saiyed Farhan" width={150} />
-            ) : (
-              <Image src={MainLogo2} alt="Saiyed Farhan" width={150} />
-            )}
-            <StyledTypography component="h1" variant="h5">
-              Create New Account
-            </StyledTypography>
-            <StyledBox component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -196,8 +213,12 @@ const CreateUserAccount = () => {
                   value={values.Confirm_Password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  error={touched.Confirm_Password && Boolean(errors.Confirm_Password)}
-                  helperText={touched.Confirm_Password && errors.Confirm_Password}
+                  error={
+                    touched.Confirm_Password && Boolean(errors.Confirm_Password)
+                  }
+                  helperText={
+                    touched.Confirm_Password && errors.Confirm_Password
+                  }
                 />
               </Grid>
             </Grid>
@@ -210,17 +231,17 @@ const CreateUserAccount = () => {
               Create Account
             </Button>
             <Grid container>
-                <Grid item xs>
-                  <Link href="/login" variant="body2">
-                    Already have an account ?
-                  </Link>
-                </Grid>
+              <Grid item xs>
+                <Link href="/login" variant="body2">
+                  Already have an account ?
+                </Link>
               </Grid>
+            </Grid>
           </StyledBox>
-          </Box>
-        </Container>
-    )
-}
+        </Box>
+      </Container>
+    </>
+  );
+};
 
-
-  export default CreateUserAccount;  
+export default CreateUserAccount;

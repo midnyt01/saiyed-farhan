@@ -26,6 +26,7 @@ import { LoginSchema } from '@/schema/schema.index';
 import { GlobalContext } from '@/context/global.context';
 import { httpLogInUser } from '@/utils/api';
 import { makeid } from '@/helper-functions';
+import Head from 'next/head';
 
 const StyledBox = styled(Box)`
     width: 80%;
@@ -96,6 +97,10 @@ const LogIn = () => {
 
 
     return (
+       <>
+       <Head>
+       <meta name="robots" content="noindex,nofollow"></meta>
+       </Head>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <Box
@@ -172,6 +177,7 @@ const LogIn = () => {
             </StyledBox>
           </Box>
         </Container>
+       </>
     )
 }
 

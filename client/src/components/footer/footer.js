@@ -76,6 +76,7 @@ const LinkHeader = styled.div`
   font-weight: 600;
   margin-bottom: 15px;
 letter-spacing: 0.5px;
+color: white;
 `;
 
 const LinkItem = styled(Link)`

@@ -110,8 +110,8 @@ const Category = styled.div`
 const CaseStudy = ({ study }) => {
   const {
     CaseStudyId,
-    MetaTitle,
-    MetaDescription,
+    metaTitle,
+    metaDescription,
     Title,
     Content,
     ImageUrl,
@@ -127,8 +127,9 @@ const CaseStudy = ({ study }) => {
   return (
     <Container>
       <Head>
-        <title>{MetaTitle}</title>
-        <meta name="description" content={MetaDescription} />
+        {/* <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} /> */}
+        <meta name="robots" content="noindex,nofollow"></meta>
       </Head>
       <Wrapper>
         <CoverImageContainer>

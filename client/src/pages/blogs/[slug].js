@@ -1,5 +1,6 @@
 import BlogPost from "@/components/blog-post/blog-post";
 import BlogSideContainer from "@/components/blog-side-container/blog-side-container";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
@@ -16,10 +17,15 @@ const BlogPage = (props) => {
 
 
   return (
+    <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"></meta>
+    </Head>
     <Container>
       <BlogPost blog={props} />
       <BlogSideContainer />
     </Container>
+    </>
   );
 };
 

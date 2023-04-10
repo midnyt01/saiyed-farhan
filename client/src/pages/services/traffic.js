@@ -2,6 +2,7 @@ import BrandingComponent from "@/components/services-component/branding-componen
 import LeadsComponent from "@/components/services-component/leads-component";
 import TrafficComponent from "@/components/services-component/traffic-component";
 import ServicesSideContainer from "@/components/services-side-container/services-side-container";
+import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
 
@@ -17,10 +18,15 @@ const TrafficPage = () => {
 
 
   return (
+    <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"></meta>
+    </Head>
     <Container>
       <TrafficComponent />
       <ServicesSideContainer activeService={"traffic"} />
     </Container>
+    </>
   );
 };
 
