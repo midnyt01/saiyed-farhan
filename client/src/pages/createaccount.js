@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLogo from "../assets/sf-white.png";
 import MainLogo2 from "../assets/sf-black.png";
 import { useState } from "react";
@@ -67,10 +67,20 @@ const defaultFormFields = {
 };
 
 const CreateUserAccount = () => {
-  const route = useRouter();
+  const router = useRouter();
 
   const { theme, isLogin, setIsLogin, addNotifiction } =
     useContext(GlobalContext);
+
+    if (!isLogin) {
+      useEffect(() => {
+        if (!isLogin) {
+          router.push('/login');
+        }
+      }, [isLogin, router])
+      return null;
+    }
+  
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -90,7 +100,7 @@ const CreateUserAccount = () => {
           localStorage.setItem("admin", data.authToken);
           //set use name and email in local storage
           setIsLogin(true);
-          route.push("/");
+          router.push("/");
           const { userInfo } = data;
           localStorage.setItem("sf-user-name", userInfo.Name);
           localStorage.setItem("sf-user-email", userInfo.Email);

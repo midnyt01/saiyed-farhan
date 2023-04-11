@@ -18,7 +18,9 @@ import ProfileInfo from "../profile-info/profile-info";
 import ServicesCard from "../services-card/services-card";
 // import Sidebar from '../sidebar/sidebar';
 
-const Container = styled.div``;
+const Container = styled.div`
+background-color: white;
+`;
 
 const Wrapper = styled.div`
   display: flex;

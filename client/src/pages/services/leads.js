@@ -1,8 +1,9 @@
 import BrandingComponent from "@/components/services-component/branding-component";
-import LeadsComponent from "@/components/services-component/leads-component";
 import ServicesSideContainer from "@/components/services-side-container/services-side-container";
+import { GlobalContext } from "@/context/global.context";
 import Head from "next/head";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -14,6 +15,19 @@ const Container = styled.div`
 `;
 
 const LeadsPage = () => {
+
+  const router = useRouter();
+
+  const {isLogin} = useContext(GlobalContext)
+
+  if (!isLogin) {
+    useEffect(() => {
+      if (!isLogin) {
+        router.push('/login');
+      }
+    }, [isLogin, router])
+    return null;
+  }
 
 
   return (
