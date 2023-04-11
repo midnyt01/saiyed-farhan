@@ -1,4 +1,5 @@
 import BrandingComponent from "@/components/services-component/branding-component";
+import LeadsComponent from "@/components/services-component/leads-component";
 import ServicesSideContainer from "@/components/services-side-container/services-side-container";
 import { GlobalContext } from "@/context/global.context";
 import Head from "next/head";
