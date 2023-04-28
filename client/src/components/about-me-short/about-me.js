@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import CoverImage from "../../assets/cover_image.jpg";
 import { Fade } from "react-reveal";
+import Link from "next/link";
 
 const Container = styled.div`
   width: 90%;
@@ -56,13 +57,20 @@ const Content = styled.div`
   }
 `;
 
+const CallToAction = styled.div`
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
 const ImageContainer = styled.div`
   flex: 1;
   width: 100%;
   margin: auto;
   margin-top: 50px;
   @media (min-width: 800px) {
-    margin-top: 200px;
+    margin-top: 20px;
   }
 
   img {
@@ -88,25 +96,17 @@ const AboutMe = () => {
     <Container>
       <Wrapper>
         <InfoContainer>
-          <Title>why you should work with me</Title>
+          <Title>Why You Should Hire Me</Title>
           <Content>
             Ullamco in voluptate incididunt aute quis reprehenderit veniam esse
             deserunt fugiat qui commodo. Dolor culpa esse adipisicing occaecat
             incididunt laborum elit veniam amet labore amet incididunt mollit.
-            Lorem cillum non ea pariatur aliqua aute pariatur. Minim do labore
-            laborum sit pariatur sint tempor et duis aliquip veniam consequat
-            exercitation exercitation. Duis et et do excepteur pariatur fugiat
-            nulla cillum amet consectetur mollit ipsum. Reprehenderit culpa
-            laborum proident nostrud excepteur aute ex magna minim culpa.
-            <br />
-            <br />
-            Exercitation sit ex consectetur sunt officia nostrud excepteur.
-            Ullamco ea veniam non in ex dolore sint. Officia aliqua sunt eu
-            labore eiusmod esse labore et. Consequat adipisicing eiusmod id
-            dolore Lorem enim ullamco laboris mollit nostrud quis. Exercitation
-            culpa id id elit deserunt sit. Enim proident consequat consequat
-            proident. Dolor cupidatat elit labore laborum esse.
           </Content>
+          <CallToAction>
+              <Link href="/saiyed-farhan">
+              Hire Me Now !
+              </Link>
+          </CallToAction>
         </InfoContainer>
         <ImageContainer>
           <Fade bottom>

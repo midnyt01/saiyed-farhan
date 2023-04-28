@@ -122,7 +122,7 @@ const ServicesSideContainer = ({activeService}) => {
                             )
                         }
                         return (
-                            <ServiceItem onClick={() => router.push(`/services/${service}`)} >
+                            <ServiceItem onClick={() => router.push(`/digital-marketing-services/${service}`)} >
                                 {service}
                             </ServiceItem>
                         )

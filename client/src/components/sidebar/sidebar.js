@@ -121,7 +121,7 @@ const Sidebar = () => {
             <Link href="/">Home</Link>
           </NavItems>
           <NavItems onClick={toggleSidebar}>
-            <Link href="/services/branding">Services</Link>
+            <Link href="/digital-marketing-services/branding">Services</Link>
           </NavItems>
           <NavItems onClick={toggleSidebar}>
             <Link href="/blogs">Blogs</Link>

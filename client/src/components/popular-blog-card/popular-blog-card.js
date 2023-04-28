@@ -95,7 +95,7 @@ const PopularBlogCard = ({blog}) => {
                     {Title}
                 </ContentTitle>
                 <ContentBody>
-                {MetaDescription.substr(0, 180)}...
+                {MetaDescription.substr(0, 120)}...
                 </ContentBody>
                 <InfoContainer>
                     <CategoryType>

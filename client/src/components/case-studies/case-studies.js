@@ -132,7 +132,7 @@ const CaseStudies = () => {
   return (
     <Container>
         <Wrapper>
-            <Title>Some Case studies</Title>
+            <Title>Online Marketing Case Studies</Title>
             <CaseStudiesContainer>
             {
                 recentCaseStudies.slice(0, 3).map((study) => {

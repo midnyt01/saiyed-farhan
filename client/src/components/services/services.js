@@ -7,6 +7,7 @@ import {
   faCheck,
   faLaptop,
   faTrafficLight,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -15,7 +16,7 @@ import { Slide } from "react-reveal";
 import styled from "styled-components";
 
 const Container = styled.div`
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 100px;
     svg.fa-arrow-right, svg.fa-arrow-right-arrow-left, svg.fa-arrow-right-long {
@@ -28,7 +29,7 @@ svg.fa-arrow-right:hover, svg.fa-arrow-right-arrow-left:hover, svg.fa-arrow-righ
 `;
 
 const Wrapper = styled.div`
-    width: 90%;
+    width: 95%;
     margin: auto;
 `;
 
@@ -54,8 +55,8 @@ grid-gap: 70px;
 margin-top: 70px;
 
 @media (min-width: 800px) {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 70px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
 
 }
 `;
@@ -135,13 +136,13 @@ const Services = () => {
   const router = useRouter();
 
   const handleOnClick = () => {
-    router.push('/services/branding')
+    router.push('/digital-marketing-services/branding')
   }
 
   return (
     <Container>
       <Wrapper>
-        <Title>services we provide</Title>
+        <Title>Digital Marketing Services</Title>
         <ServicesContainer>
           <Slide bottom>
           <ServiceCard>
@@ -164,7 +165,7 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/branding"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
+              <Link href="/digital-marketing-services/branding"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
           </Slide>
@@ -191,7 +192,7 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/sales"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
+              <Link href="/digital-marketing-services/sales"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
           </Slide>
@@ -202,7 +203,7 @@ const Services = () => {
             <ServiceLogo><FontAwesomeIcon icon={faTrafficLight} size="4x"/></ServiceLogo>
             <ServiceTitle>Traffic</ServiceTitle>
             <ServiceDescription>
-              Aliquip eu et tempor occaecat est. Aliquip eu et.
+              Aliquip eu et tempor occaecat est. Aliquip eu et tempor.
             </ServiceDescription>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
@@ -218,7 +219,34 @@ const Services = () => {
             </ServiceContent>
             <ServiceBottom>
               <ServiceAction>Continue Reading</ServiceAction>
-              <Link href="/services/traffic"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
+              <Link href="/digital-marketing-services/traffic"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
+            </ServiceBottom>
+          </ServiceCard>
+          </Slide>
+
+          {/* Service 4 */}
+          <Slide bottom>
+          <ServiceCard>
+            <ServiceLogo><FontAwesomeIcon icon={faUsers} size="4x"/></ServiceLogo>
+            <ServiceTitle>Leads</ServiceTitle>
+            <ServiceDescription>
+              Aliquip eu et tempor occaecat est. Aliquip eu et tempor.
+            </ServiceDescription>
+            <ServiceContent>
+              <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
+              Lorem ipsum dolor
+            </ServiceContent>
+            <ServiceContent>
+              <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
+              Lorem ipsum dolor
+            </ServiceContent>
+            <ServiceContent>
+              <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
+              Lorem ipsum dolor
+            </ServiceContent>
+            <ServiceBottom>
+              <ServiceAction>Continue Reading</ServiceAction>
+              <Link href="/digital-marketing-services/leads"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
           </Slide>

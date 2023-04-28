@@ -32,3 +32,24 @@ export function convertUnixToDM(unixTimestamp) {
     return result;
 }
   
+
+export async function getPlaceReviews(placeId, apiKey) {
+  try {
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`;
+
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json();
+      return data.result.reviews;
+    } else {
+      throw new Error(`Error fetching place reviews: ${response.status}`);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+
+  return [];
+}
+
+const apiKey = "AIzaSyDKI7XTRAxzODbotQKS2enFgF6AgwYl8MQ";

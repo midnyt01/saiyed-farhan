@@ -146,7 +146,7 @@ const PopularBlogs = () => {
   return (
     <Container>
         <Wrapper>
-            <Title>Recent Blogs</Title>
+            <Title>Digital Marketing Blogs</Title>
             <PopularBlogsContainer>
             {
                 recentBlogs.slice(0, 3).map(blog => {

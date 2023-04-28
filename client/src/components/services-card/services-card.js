@@ -97,7 +97,7 @@ const ServicesCard = () => {
             <ServiceItem
               key={name}
               onClick={() => {
-                router.push(`/services/${name}`);
+                router.push(`/digital-marketing-services/${name}`);
                 setIsServiceCardOpen(false);
               }}
             >
