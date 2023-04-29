@@ -38,10 +38,7 @@ const BlogHeadContainer = styled.div`
 
 const BlogHeading = styled.h1`
   text-transform: uppercase;
-  font-size: 30px;
-  @media (min-width: 800px) {
-    font-size: 40px;
-  }
+  font-size: 22px;
 `;
 
 const HR = styled.hr`
@@ -57,21 +54,21 @@ const ContentContainer = styled.div`
   margin-top: 40px;
 `;
 const ContentHeading = styled.h2`
-font-size: 25px;
+font-size: 20px;
 text-transform: capitalize;
 `;
 
 const PageContent = styled.div`
   margin-top: 15px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
 `;
 
 const KeyPointsContainer = styled.div`
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
   width: 95%;
   margin: auto;
   margin-top: 15px;

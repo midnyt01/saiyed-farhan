@@ -12,6 +12,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import Link from "next/link";
 import Image from "next/image";
 import { Slide } from "react-reveal";
+
+
 const Container = styled.div`
 width: 100%;
 margin-top: 30px;
@@ -42,11 +44,12 @@ const HeroBannerContainer = styled.div`
 `;
 
 const Title = styled.h1`
-font-size: 14.3vw;
+font-size: 50px;
 letter-spacing: 5px;
 margin-top: -10px;
 text-align: left;
    @media(min-width: 800px) {
+    font-size: 150px;
     margin: 0;
     margin-top: -20px;
     letter-spacing: 27px;
@@ -57,14 +60,14 @@ text-align: left;
 const Subtitle = styled.h2`
 color: rgb(83,83,83);
 text-transform: uppercase;
-font-size: 20px;
+font-size: 18px;
 text-align: left;
-letter-spacing: 2px;
+letter-spacing: 0.5px;
 margin-top: -8px;
 text-transform: uppercase;
 
 @media(min-width: 800px) {
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: 20px;
     margin-top: -20px;
     margin-right: 10px;

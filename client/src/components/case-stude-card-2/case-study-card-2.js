@@ -33,7 +33,7 @@ const ContentTitle = styled.div`
 `
 
 const ContentBody = styled.p`
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 10px;
 `
 
@@ -46,7 +46,7 @@ align-items: center;
 margin-top: 20px;
 box-sizing: border-box;
 /* padding-right: 40px; */
-font-size: 15px;
+font-size: 16px;
 flex-wrap: wrap;
 row-gap: 10px;
 `;

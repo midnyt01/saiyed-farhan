@@ -52,7 +52,7 @@ const NavItemContainer = styled.div`
 `;
 
 const NavItems = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   a {
     color: white !important;
   }
@@ -63,7 +63,7 @@ const PoliciesContainer = styled.div`
   column-gap: 10px;
   padding: 10px 15px;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 16ppx;
 `;
 const Policy = styled.p`
   margin: 0;

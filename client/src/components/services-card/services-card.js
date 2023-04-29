@@ -18,7 +18,7 @@ import styled from "styled-components";
 const Container = styled.div`
   background: white;
   position: absolute;
-  right: 560px;
+  right: 480px;
   width: 180px;
   max-height: 250px;
   top: ${(props) => props.top};
@@ -39,7 +39,7 @@ const ServicesWrapper = styled.div`
   width: 100%;
   padding: 10px 25px;
   text-transform: capitalize;
-  font-size: 19px;
+  font-size: 18px;
 `;
 
 const ServiceItem = styled.div`

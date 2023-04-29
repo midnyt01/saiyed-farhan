@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   background: transparent;
   margin: auto;
-  padding: 15px 10px;
+  padding: 7px 10px;
   box-sizing: border-box;
   text-transform: uppercase;
 `;
@@ -57,8 +57,8 @@ const UnorderedList = styled.ul`
   align-items: center;
 `;
 const ListItem = styled.li`
-  margin-right: 2.5rem;
-  font-size: 1.3rem;
+  margin-right: 30px;
+  font-size: 18px;
   cursor: pointer;
 
   img {
@@ -84,7 +84,7 @@ const ExtraItemContainer = styled.div`
 `;
 
 const ExtraItems = styled.div`
-  font-size: 1.3rem;
+  font-size: 18px;
   cursor: pointer;
 
   img {

@@ -11,13 +11,10 @@ const Container = styled.div`
 `;
 
 const PageHeading = styled.h1`
-  font-size: 10vw;
+  font-size: 22px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
-  @media (min-width: 800px) {
-    font-size: 6.5vw;
-  }
 `;
 
 const Wrapper = styled.div`

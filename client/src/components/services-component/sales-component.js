@@ -35,7 +35,7 @@ const BlogHeadContainer = styled.div`
 
 const BlogHeading = styled.h1`
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 22px;
 `;
 
 const HR = styled.hr`
@@ -52,21 +52,21 @@ const ContentContainer = styled.div`
   margin-top: 40px;
 `;
 const ContentHeading = styled.h2`
-font-size: 25px;
+font-size: 20px;
 text-transform: capitalize;
 `;
 
 const PageContent = styled.div`
   margin-top: 15px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
 `;
 
 const KeyPointsContainer = styled.div`
-  font-size: 18px;
-letter-spacing: 1px;
-line-height: 1.5;
+  font-size: 16px;
+letter-spacing: 0.5px;
+line-height: 1.4;
 width: 95%;
 margin: auto;
 margin-top: 40px;
@@ -116,25 +116,25 @@ const SalesComponent = () => {
           The sales funnel is a journey that a potential customer goes through before making a purchase. It consists of four stages: awareness, interest, decision, and action.
           </PageContent>
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Branding Stage: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Branding Stage: </b>
               At the top of the funnel is the awareness stage. This is where potential customers become aware of your brand and what you offer.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px', margin: ''}}><b>Curiosity Stage: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px', margin: ''}}><b>Curiosity Stage: </b>
               The next stage is the interest stage, where potential customers start to research your products or services.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Intent Stage: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Intent Stage: </b>
               The decision stage is where potential customers are ready to make a purchase.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Conversion Stage: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Conversion Stage: </b>
               This is the action stage is where they actually make the purchase.
               </h3>
             </PageContent>

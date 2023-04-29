@@ -4,7 +4,7 @@ import TestimonailCard from "../testimonial-card/testimonial-card";
 const Container = styled.div`
   width: 90%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 const Wrapper = styled.div`
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1.5;
   text-transform: uppercase;
   text-decoration: underline;
@@ -21,7 +21,7 @@ const Title = styled.h3`
   font-weight: 600;
   letter-spacing: 1px;
   @media (min-width: 800px) {
-    font-size: 50px;
+    font-size: 22px;
     width: 80%;
     margin: auto;
   }

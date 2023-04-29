@@ -31,7 +31,7 @@ const ReviewContainer = styled.div`
 `;
 const Review = styled.p`
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 1px;
   line-height: 1.3;
 `;

@@ -18,19 +18,19 @@ const Container = styled.div`
 const ServicesWrapper = styled.div`
 width: 85%;
 margin: auto;
-font-size: 22px;
+font-size: 16px;
 `;
 
 const ServicesHeading = styled.div`
 text-transform: uppercase;
-font-size: 30px;
+font-size: 20px;
 font-weight: 600;
 letter-spacing: 1px;
 text-decoration: underline;
 `;
 
 const ServicesList = styled.div`
-margin-top: 40px;
+margin-top: 20px;
 text-transform: capitalize;
 `;
 
@@ -67,7 +67,7 @@ box-sizing: border-box;
 `;
 
 const TouchHeader = styled.div`
-font-size: 25px;
+font-size: 20px;
 text-align: center;
 font-weight: bold;
 letter-spacing: 0.5px;

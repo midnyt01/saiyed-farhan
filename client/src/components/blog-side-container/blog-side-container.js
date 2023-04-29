@@ -20,7 +20,7 @@ const Wrapper = styled.div``;
 const RecentsContainer = styled.div``;
 
 const RecentTitle = styled.div`
-  font-size: 30px;
+  font-size: 22px;
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: 600;
@@ -36,7 +36,7 @@ const CategoriesContainer = styled.div`
 `;
 
 const CategoryTitle = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: 600;
@@ -47,7 +47,7 @@ const CategoriesWrapper = styled.div`
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 20px;
-  font-size: 19px;
+  font-size: 16px;
   margin-top: 25px;
 
   div {

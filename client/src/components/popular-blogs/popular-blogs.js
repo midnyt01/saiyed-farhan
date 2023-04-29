@@ -12,7 +12,7 @@ import Link from "next/link";
 const Container = styled.div`
     width: 90%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     cursor: pointer;
 `
 
@@ -22,22 +22,18 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h3`
-font-size: 30px;
+font-size: 22px;
 line-height: 1.5;
 text-transform: uppercase;
 text-decoration: underline;
 text-align: center;
 font-weight: 600;
 letter-spacing: 1px;
-@media (min-width: 800px) {
-    font-size: 50px;
-    
-}
 `;
 
 const PopularBlogsContainer = styled.div`
     width: 100%;
-    margin-top: 70px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 70px;
@@ -54,7 +50,7 @@ const ActionButton = styled.div`
     padding: 5px 35px;
     background: #95DE4C;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     width: max-content;
     margin: auto;

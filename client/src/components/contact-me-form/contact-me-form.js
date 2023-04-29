@@ -10,7 +10,7 @@ import styled from "styled-components";
 const Container = styled.div`
     width: 90%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 `;
 
 const Wrapper = styled.div`
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-font-size: 30px;
+font-size: 22px;
 line-height: 1.5;
 text-transform: uppercase;
 text-decoration: underline;
@@ -27,7 +27,6 @@ text-align: center;
 font-weight: 600;
 letter-spacing: 1px;
 @media (min-width: 800px) {
-    font-size: 50px;
     width: 50%;
     margin: auto;
 }
@@ -36,7 +35,7 @@ letter-spacing: 1px;
 const ContactForm = styled.form`
     width: 90%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +47,7 @@ const FormInput = styled.input`
     width: 110%;
     box-sizing: border-box;
     padding: 15px;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 0.7px;
     font-weight: 400;
     color: black;
@@ -65,7 +64,7 @@ const FromSelect = styled.select`
     width: 110%;
     box-sizing: border-box;
     padding: 15px;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 0.7px;
     font-weight: 400;
     color: black;
@@ -79,7 +78,7 @@ const FromSelect = styled.select`
 `;
 
 const FormOption = styled.option`
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     outline: none;
     background: rgba(225, 226, 216, 0.5);
@@ -89,7 +88,7 @@ const MessageBox = styled.textarea`
     width: 110%;
     box-sizing: border-box;
     padding: 15px;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 0.7px;
     font-weight: 400;
     color: black;
@@ -106,7 +105,7 @@ const MessageBox = styled.textarea`
 
 const SubmitButton = styled.button`
     border: none;
-    margin-top: 30px;
+    margin-top: 10px;
     box-sizing: border-box;
     padding: 12px 40px;
     letter-spacing: 0.5px;
@@ -120,9 +119,7 @@ const SubmitButton = styled.button`
         background: rgb(67, 97, 255);
     }
     @media (min-width: 800px){
-        margin-top: 50px;
         padding: 15px 50px;
-        font-size: 18px;
     }
 `;
 
@@ -130,7 +127,7 @@ const HR = styled.hr`
 width: 50%;
 margin: auto;
 box-sizing: border-box;
-margin-top: 70px;
+margin-top: 40px;
 `
 
 const SocialsContainer = styled.div`
@@ -139,8 +136,8 @@ const SocialsContainer = styled.div`
 
 const SocialTitle = styled.div`
 text-align: center;
-margin-top: 70px;
-font-size: 35px;
+margin-top: 40px;
+font-size: 20px;
 font-weight: 600;
 letter-spacing: 0.5px;
 `;
@@ -148,7 +145,7 @@ letter-spacing: 0.5px;
 const SocialWrapper = styled.div`
 width: 300px;
 margin: auto;
-margin-top: 50px;
+margin-top: 20px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -244,10 +241,10 @@ const ContactMeForm = () => {
                 Find me on
             </SocialTitle>
             <SocialWrapper>
-                <FontAwesomeIcon icon={faInstagram} size="3x" />
-                <FontAwesomeIcon icon={faYoutube} size="3x" />
-                <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                <FontAwesomeIcon icon={faFacebook} size="3x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faYoutube} size="2x" />
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
             </SocialWrapper>
         </SocialsContainer>
     </Container>

@@ -18,7 +18,7 @@ import styled from "styled-components";
 const Container = styled.div`
     width: 95%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     svg.fa-arrow-right, svg.fa-arrow-right-arrow-left, svg.fa-arrow-right-long {
   transition: transform 0.2s ease-in-out;
 }
@@ -34,17 +34,13 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-font-size: 30px;
+font-size: 22px;
 line-height: 1.5;
 text-transform: uppercase;
 text-decoration: underline;
 text-align: center;
 font-weight: 600;
 letter-spacing: 1px;
-@media (min-width: 800px) {
-    font-size: 50px;
-    
-}
 `;
 
 const ServicesContainer = styled.div`
@@ -52,7 +48,7 @@ width: 100%;
 display: grid;
 grid-template-columns: repeat(1, 1fr);
 grid-gap: 70px;
-margin-top: 70px;
+margin-top: 40px;
 
 @media (min-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
@@ -78,7 +74,7 @@ font-weight: 600;
 `;
 
 const ServiceDescription = styled.div`
-font-size: 14px;
+font-size: 16px;
 font-weight: 100;
 margin-top: 20px;
 margin-bottom: 15px;
@@ -103,7 +99,7 @@ margin-top: 25px;
 `;
 
 const ServiceAction = styled.div`
-font-size: 15px;
+font-size: 16px;
 letter-spacing: 1px;
 `;
 

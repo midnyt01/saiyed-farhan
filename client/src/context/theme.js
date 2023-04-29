@@ -3,7 +3,7 @@ import { GlobalContext } from './global.context';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background-color: ${props => props.theme == 'light' ? '#F3F3F3' : "#0c0c0c"};
+    background-color: ${props => props.theme == 'light' ? '#F6F6F6' : "#0c0c0c"};
     color: ${props => props.theme == 'light' ? 'black' : "white"};
 
     a {

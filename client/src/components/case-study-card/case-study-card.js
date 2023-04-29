@@ -33,7 +33,7 @@ const ContentTitle = styled.div`
 `
 
 const ContentBody = styled.p`
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 10px;
 `
 const InfoContainer = styled.div`
@@ -42,7 +42,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 20px;
-font-size: 15px;
+font-size: 16px;
 `;
 
 const CategoryType = styled.div`

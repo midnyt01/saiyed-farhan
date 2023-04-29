@@ -35,7 +35,7 @@ const BlogHeadContainer = styled.div`
 
 const BlogHeading = styled.h1`
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 22px;
 `;
 
 const HR = styled.hr`
@@ -51,21 +51,21 @@ const ContentContainer = styled.div`
   margin-top: 40px;
 `;
 const ContentHeading = styled.h2`
-  font-size: 25px;
+  font-size: 20px;
   text-transform: capitalize;
 `;
 
 const PageContent = styled.div`
   margin-top: 15px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
 `;
 
 const KeyPointsContainer = styled.div`
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
   width: 95%;
   margin: auto;
   margin-top: 40px;
@@ -161,19 +161,19 @@ const TrafficComponent = () => {
           Not all website traffic is created equal. There are three main types of website traffic: direct traffic, organic traffic, and referral traffic.
           </PageContent>
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Direct Traffic </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Direct Traffic </b>
                refers to visitors who come to your website by typing your URL directly into their browser. These visitors are already familiar with your brand and are intentionally seeking out your website.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px', margin: ''}}><b>Organic Traffic</b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px', margin: ''}}><b>Organic Traffic</b>
               refers to visitors who come to your website through search engines like Google. These visitors find your website by searching for relevant keywords and clicking on your website's link in the search results.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Referral Traffic</b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Referral Traffic</b>
               refers to visitors who come to your website through links on other websites. These visitors are referred to your website by other websites that link to your content.
               </h3>
             </PageContent>
@@ -263,24 +263,24 @@ const TrafficComponent = () => {
             Common Mistakes to Avoid When Trying to Increase Website Traffic
           </ContentHeading>
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Focusing on quantity over quality:  </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Focusing on quantity over quality:  </b>
               It's essential to attract high-quality traffic to your website that is relevant to your brand and your target audience. Focusing on quantity over quality can lead to a high bounce rate and low conversion rates
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px', margin: ''}}><b>Neglecting SEO: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px', margin: ''}}><b>Neglecting SEO: </b>
               SEO is a long-term strategy that takes time and effort to implement. Neglecting SEO can lead to poor search engine rankings and a lack of organic traffic.
               </h3>
             </PageContent>
 
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Ignoring mobile optimization: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Ignoring mobile optimization: </b>
               Mobile optimization is essential for providing a seamless user experience on mobile devices. Ignoring mobile optimization can lead to a high bounce rate and a lack of mobile traffic.
               </h3>
             </PageContent>
             <PageContent>
-              <h3 style={{fontWeight: '400', fontSize: '18px', letterSpacing: '1.2px'}}><b>Not tracking your results: </b>
+              <h3 style={{fontWeight: '400', fontSize: '16px', letterSpacing: '1.2px'}}><b>Not tracking your results: </b>
               Tracking your results is essential for optimizing your website and your marketing campaigns over time. Not tracking your results can lead to missed opportunities and wasted resources.
               </h3>
             </PageContent>

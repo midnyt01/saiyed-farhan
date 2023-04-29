@@ -7,7 +7,7 @@ import Link from "next/link";
 const Container = styled.div`
   width: 90%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 const Wrapper = styled.div`
@@ -31,7 +31,7 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.5;
   text-transform: uppercase;
   text-decoration: underline;
@@ -39,13 +39,12 @@ const Title = styled.h3`
   font-weight: 600;
   letter-spacing: 1px;
   @media (min-width: 800px) {
-    font-size: 40px;
     width: 90%;
   }
 `;
 
 const Content = styled.div`
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 20px;
   width: 100%;
   letter-spacing: 0.5px;
@@ -53,13 +52,12 @@ const Content = styled.div`
   @media (min-width: 800px) {
     width: 85%;
     margin-top: 50px;
-    font-size: 25px;
   }
 `;
 
 const CallToAction = styled.div`
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 `;
