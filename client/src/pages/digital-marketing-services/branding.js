@@ -34,6 +34,8 @@ const BrandingPage = () => {
   return (
     <>
     <Head>
+      <title>Branding: Digital Marketing Service - 100% Proven Strategies</title>
+      <meta name="description" content="Transform your business into Brand with my branding service. Stand out from the competition and attract your target audience. Contact us today!" />
     <meta name="robots" content="noindex,nofollow"></meta>
     </Head>
     <Container>

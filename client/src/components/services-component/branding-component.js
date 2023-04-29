@@ -87,10 +87,6 @@ const KeyPoint = styled.div`
 const BrandingComponent = () => {
   return (
     <Container>
-      <Head>
-        <title>Branding Page</title>
-        <meta name="description" content="Branding Page" />
-      </Head>
       <Wrapper>
         <CoverImageContainer>
           <Image
@@ -98,6 +94,7 @@ const BrandingComponent = () => {
             alt="blog cover image"
             width={100}
             height={100}
+            unoptimized
           />
         </CoverImageContainer>
         <BlogHeadContainer>
@@ -318,23 +315,6 @@ const BrandingComponent = () => {
           In conclusion, online branding is essential for any business's success in today's digital age. By creating a strong brand identity through digital platforms, businesses can increase their visibility, reach a wider audience, and establish brand loyalty.
           </PageContent> 
         </ContentContainer>
-
-        {/* <KeyPointsContainer>
-          <KeyPoint>
-            <FontAwesomeIcon icon={faCheck} size="xl" />
-            Lorem ipsum dolor
-          </KeyPoint>
-
-          <KeyPoint>
-            <FontAwesomeIcon icon={faCheck} size="xl" />
-            Lorem ipsum dolor
-          </KeyPoint>
-
-          <KeyPoint>
-            <FontAwesomeIcon icon={faCheck} size="xl" />
-            Lorem ipsum dolor
-          </KeyPoint>
-        </KeyPointsContainer> */}
 
         <HR style={{ marginTop: "50px", width: "95%" }} />
       </Wrapper>

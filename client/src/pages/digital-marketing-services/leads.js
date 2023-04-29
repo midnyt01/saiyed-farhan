@@ -16,33 +16,35 @@ const Container = styled.div`
 `;
 
 const LeadsPage = () => {
-
   const router = useRouter();
 
-  const {isLogin} = useContext(GlobalContext)
+  const { isLogin } = useContext(GlobalContext);
 
   if (!isLogin) {
     useEffect(() => {
       if (!isLogin) {
-        router.push('/login');
+        router.push("/login");
       }
-    }, [isLogin, router])
+    }, [isLogin, router]);
     return null;
   }
 
-
   return (
     <>
-    <Head>
-    <meta name="robots" content="noindex,nofollow"></meta>
-    </Head>
-    <Container>
-      <LeadsComponent />
-      <ServicesSideContainer activeService={"leads"} />
-    </Container>
+      <Head>
+        <title> Increase Online Leads via Digital Marketing Service</title>
+        <meta
+          name="description"
+          content="Generate more leads by availing the best and proven digital marketing strategies. Stand out from the competition and attract your target audience. Contact us today!"
+        />
+        <meta name="robots" content="noindex,nofollow"></meta>
+      </Head>
+      <Container>
+        <LeadsComponent />
+        <ServicesSideContainer activeService={"leads"} />
+      </Container>
     </>
   );
 };
-
 
 export default LeadsPage;

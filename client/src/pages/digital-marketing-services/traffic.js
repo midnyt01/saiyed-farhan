@@ -34,6 +34,8 @@ const TrafficPage = () => {
   return (
     <>
     <Head>
+    <title> Increase Website Traffic - Digital Marketing ServiceProven Strategies</title>
+      <meta name="description" content=" Increase your website traffic by availing the best and proven digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
     <meta name="robots" content="noindex,nofollow"></meta>
     </Head>
     <Container>

@@ -33,6 +33,8 @@ const SalesPage = () => {
   return (
     <>
     <Head>
+      <title>Online Sales -  Data-Oriented Digital Marketing Service</title>
+      <meta name="description" content=" Increase your sales and revenue by availing the best and data-oriented  digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
     <meta name="robots" content="noindex,nofollow"></meta>
     </Head>
       <Container>
