@@ -146,22 +146,22 @@ const Footer = () => {
                     <LinkItem href="/saiyed-farhan"> About Me</LinkItem>
                     <LinkItem href="/casestudies"> Case Studies</LinkItem>
                     <LinkItem href="/blogs"> Blogs</LinkItem>
-                    <LinkItem href="services/branding"> Services</LinkItem>
+                    <LinkItem href="digital-marketing-services/branding"> Services</LinkItem>
                     <LinkItem href="/"> Contact Me</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
                     <LinkHeader>Services</LinkHeader>
-                    <LinkItem href="/services/branding"> Branding</LinkItem>
-                    <LinkItem href="/services/sales"> Sales</LinkItem>
-                    <LinkItem href="/services/traffic"> Traffic</LinkItem>
-                    <LinkItem href="/services/leads"> Leads</LinkItem>
+                    <LinkItem href="/digital-marketing-services/branding"> Branding</LinkItem>
+                    <LinkItem href="/digital-marketing-services/sales"> Sales</LinkItem>
+                    <LinkItem href="/digital-marketing-services/traffic"> Traffic</LinkItem>
+                    <LinkItem href="/digital-marketing-services/leads"> Leads</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
                     <LinkHeader>More Servies</LinkHeader>
-                    <LinkItem href="/services/traffic"> LOCAL SEO</LinkItem>
-                    <LinkItem href="/services/traffic"> SERP SEO</LinkItem>
+                    <LinkItem href="/digital-marketing-services/traffic"> LOCAL SEO</LinkItem>
+                    <LinkItem href="/digital-marketing-services/traffic"> SERP SEO</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
