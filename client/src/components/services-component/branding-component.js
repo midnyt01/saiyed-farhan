@@ -4,10 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import CoverImage from "../../assets/cover_image.jpg";
 import BlogComments from "../blog-comments/blog-comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
+import CoverImage from "../../assets/cover_image.jpg";
+import Serviceimg from "../../assets/target-audience.png";
+import Serviceimg1 from "../../assets/lightbulb.png";
+import Serviceimg2 from "../../assets/business.png"
 
 const Container = styled.div`
   flex: 8;
@@ -24,11 +29,19 @@ const Wrapper = styled.div`
 
 const CoverImageContainer = styled.div`
   width: 100%;
+  margin-top: 40px;
   img {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
 `;
+
+const ServiceIntro = styled.div`
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+`
 
 const BlogHeadContainer = styled.div`
   width: 95%;
@@ -54,7 +67,7 @@ const ContentContainer = styled.div`
   margin-top: 40px;
 `;
 const ContentHeading = styled.h2`
-font-size: 20px;
+font-size: 18px;
 text-transform: capitalize;
 `;
 
@@ -65,9 +78,42 @@ const PageContent = styled.div`
   line-height: 1.4;
 `;
 
+const ServicesGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+  row-gap: 30px;
+  column-gap: 20px;
+  margin-top: 50px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+const ContentContainerCard = styled.div`
+  min-height: 400px;
+  background-color: #282828;
+  border-radius: 2px;
+  text-align: center;
+  padding: 8px;
+`
+const ContentCardHeading = styled.h4`
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 0 5px 0;
+`
+
+const CardContent = styled.p`
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 0 8px 0;
+`
+
 const KeyPointsContainer = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.5px;
+  color: #fff;
   line-height: 1.4;
   width: 95%;
   margin: auto;
@@ -79,13 +125,45 @@ const KeyPoint = styled.div`
   align-items: center;
   column-gap: 20px;
   margin-top: 7px;
+  justify-content: left;
+  text-align: left;
+  svg {
+    color: #95DE4C;
+  }
 `;
+
+const BottomContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
+const SubContent = styled.div`
+  width: 80%;
+`
+
+const SubContentImg = styled.div`
+  width: 20%;
+`
 
 const BrandingComponent = () => {
   return (
     <Container>
       <Wrapper>
-        <CoverImageContainer>
+        <BlogHeadContainer>
+          <BlogHeading>
+            Branding Your Business: Digital Marketing Branding Service
+          </BlogHeading>
+        </BlogHeadContainer>
+        <HR />
+        <ServiceIntro>
+          <CoverImageContainer>
           <Image
             src={CoverImage}
             alt="blog cover image"
@@ -93,24 +171,8 @@ const BrandingComponent = () => {
             height={100}
             unoptimized
           />
-        </CoverImageContainer>
-        <BlogHeadContainer>
-          <BlogHeading>
-            Branding Your Business: Digital Marketing Branding Service
-          </BlogHeading>
-        </BlogHeadContainer>
-        <HR />
-        <ContentContainer>
-          <PageContent>
-            In today's digital age, online branding is vital for any business's
-            success. Building a strong brand identity can set a business apart
-            from its competitors and create a lasting impression on customers.
-            Online branding refers to the process of creating a brand identity
-            through digital platforms, such as social media, search engines, and
-            website design
-          </PageContent>
-        </ContentContainer>
-        <ContentContainer>
+          </CoverImageContainer>
+          <ContentContainer>
           <ContentHeading>
             The Importance of Online Branding in 21st Century
           </ContentHeading>
@@ -133,175 +195,208 @@ const BrandingComponent = () => {
             lower cost.
           </PageContent>
         </ContentContainer>
+        </ServiceIntro>
+        <ContentContainer>
+            <PageContent>
+              In today's digital age, online branding is vital for any business's
+              success. Building a strong brand identity can set a business apart
+              from its competitors and create a lasting impression on customers.
+              Online branding refers to the process of creating a brand identity
+              through digital platforms, such as social media, search engines, and
+              website design
+            </PageContent>
+          </ContentContainer>
+
+        <ServicesGrid>
+          <ContentContainerCard>
+            <ContentCardHeading>
+              Creating a Strong Brand Identity Through Digital Branding Campaigns
+            </ContentCardHeading>
+            <CardContent>
+              Digital branding services can help businesses create a strong brand
+              identity through various digital platforms. These platforms include
+              -
+            </CardContent>
+            <KeyPointsContainer>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Google Ads (Search, Display, YouTube, Emails)
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Social Media Management (Organic & Paid Ads)
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Search Engine Optimization (Local & Broad).
+              </KeyPoint>
+            </KeyPointsContainer>
+            <CardContent>
+            <b>Note:</b> Website design / App design is an important aspect of digital branding. A well-designed website / app can help to establish a business's brand identity and create a positive user experience.
+            </CardContent>
+          </ContentContainerCard>
+
+          <ContentContainerCard>
+            <ContentCardHeading>
+              Branding Through Google Ads
+            </ContentCardHeading>
+            <CardContent>
+            Google Ads is a powerful tool for branding. With Google Ads, businesses can create targeted campaigns to reach their ideal audience. It allows businesses to target users based on various factors, such as location, interests, and search history.
+            </CardContent>
+            <CardContent>
+            Google Ads gives various platforms to target the users:
+            </CardContent>
+            <KeyPointsContainer>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Partnered Websites: Display Ads
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                YouTube: Video Ads
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Email: Discovery Ads
+              </KeyPoint>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                  Search Engine: Search Ads, <br />Shopping Ads (ECom)
+              </KeyPoint>
+            </KeyPointsContainer>
+
+          </ContentContainerCard>
+
+          <ContentContainerCard>
+            <ContentCardHeading>
+            Building Your Brand on Social Media
+            </ContentCardHeading>
+            <CardContent>
+            Social media is a powerful tool for building a brand identity. Businesses can use social media to engage with customers, create targeted campaigns, and promote their products or services.
+            </CardContent>
+            <CardContent>
+            There are many Social Media platforms available today. Following are the most active and famous platforms:
+            </CardContent>
+            <KeyPointsContainer>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Meta (FB & Instagram)
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Twitter
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                LinkedIn
+              </KeyPoint>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Pinterest
+              </KeyPoint>
+            </KeyPointsContainer>
+          </ContentContainerCard>
+
+
+          <ContentContainerCard>
+            <ContentCardHeading>
+              Branding Through SEO: How to Rank High on Search Engines
+            </ContentCardHeading>
+            <CardContent>
+              SEO is an important aspect of online branding. By optimizing the website for search engines, businesses can increase their visibility and reach a wider audience in an organic way.
+            </CardContent>
+            <CardContent>
+            There are many Social Media platforms available today. Following are the most active and famous platforms:
+            </CardContent>
+            <KeyPointsContainer>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                There two types in SEO based on the nature of the business:
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Local SEO: For business serving to a limited radius
+              </KeyPoint>
+
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Measuring the Effectiveness of Your Online Branding Efforts
+              </KeyPoint>
+              <KeyPoint>
+                <FontAwesomeIcon icon={faCircleCheck} size="xl" />
+                Measuring the Effectiveness of Your Online Branding Efforts
+              </KeyPoint>
+              <KeyPoint>
+                Measuring the effectiveness of online branding efforts is essential for improving future campaigns. I use various tools, such as Google Analytics, Google Search Console, Semrush, SERPRobot to track website traffic, engagement, and conversions.
+              </KeyPoint>
+            </KeyPointsContainer>
+          </ContentContainerCard>
+        </ServicesGrid>
 
         <ContentContainer>
-          <ContentHeading>
-            Understanding Your Target Audience for Effective Online Branding
-          </ContentHeading>
-          <PageContent>
-            To create an effective online branding strategy, you as a business
-            owner must first understand thetarget audience. Knowing who your
-            target audience is and what they are interested in can help to
-            create targeted campaigns that resonate with them.
-          </PageContent>
-          <PageContent>
-            This is where my expertise comes in - I use various tools and
-            tactics to gain insights into the target audience's behavior and
-            preferences. Additionally, conducting surveys and focus groups can
-            help to gain a deeper understanding of the target audience.
-          </PageContent>
+          <BottomContent>
+            <SubContentImg>
+              <Image src={Serviceimg} alt="branding image" />
+            </SubContentImg>
+            <SubContent>
+              <ContentHeading>
+                Understanding Your Target Audience for Effective Online Branding
+              </ContentHeading>
+              <PageContent>
+                To create an effective online branding strategy, you as a business
+                owner must first understand thetarget audience. Knowing who your
+                target audience is and what they are interested in can help to
+                create targeted campaigns that resonate with them.
+              </PageContent>
+              <PageContent>
+                This is where my expertise comes in - I use various tools and
+                tactics to gain insights into the target audience's behavior and
+                preferences. Additionally, conducting surveys and focus groups can
+                help to gain a deeper understanding of the target audience.
+              </PageContent>
+            </SubContent>
+          </BottomContent>
         </ContentContainer>
         <ContentContainer>
-          <ContentHeading>
-            Creating a Strong Brand Identity Through Digital Branding Campaigns
-          </ContentHeading>
-          <PageContent>
-            Digital branding services can help businesses create a strong brand
-            identity through various digital platforms. These platforms include
-            -
-          </PageContent>
-          <KeyPointsContainer>
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Google Ads (Search, Display, YouTube, Emails)
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Social Media Management (Organic & Paid Ads)
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Search Engine Optimization (Local & Broad).
-            </KeyPoint>
-          </KeyPointsContainer>
-          <PageContent>
-          <b>Note:</b> Website design / App design is an important aspect of digital branding. A well-designed website / app can help to establish a business's brand identity and create a positive user experience.
-          </PageContent>
+          <BottomContent>
+            <div>
+              <ContentHeading>
+                My Tip: Common Online Branding Mistakes to Avoid
+              </ContentHeading>
+              <PageContent>
+              There are several common online branding mistakes that businesses should avoid. One mistake is not having a clear brand message. Businesses must ensure that their brand message is consistent across all digital platforms. Another mistake is not engaging with customers on social media. Engaging with customers can help to build brand loyalty and increase customer satisfaction.
+              </PageContent>
+              <PageContent>
+              Another mistake is not optimizing their website for search engines. By neglecting SEO, businesses may be missing out on potential customers. Finally, businesses must avoid being too sales-focused in their online branding efforts. Customers want to engage with businesses that provide value and solve their problems, not just sell products or services.
+              </PageContent> 
+            </div>
+            <SubContentImg>
+              <Image src={Serviceimg1} alt="branding image" />
+            </SubContentImg>
+          </BottomContent>
         </ContentContainer>
 
         <ContentContainer>
-          <ContentHeading>
-            Branding Through Google Ads
-          </ContentHeading>
-          <PageContent>
-          Google Ads is a powerful tool for branding. With Google Ads, businesses can create targeted campaigns to reach their ideal audience. It allows businesses to target users based on various factors, such as location, interests, and search history.
-          </PageContent>
-          <PageContent>
-          Google Ads gives various platforms to target the users:
-          </PageContent>
-          <KeyPointsContainer>
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Partnered Websites: Display Ads
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              YouTube: Video Ads
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Email: Discovery Ads
-            </KeyPoint>
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-                Search Engine: Search Ads, Shopping Ads (ECom)
-            </KeyPoint>
-          </KeyPointsContainer>
-
-        </ContentContainer>
-
-        <ContentContainer>
-          <ContentHeading>
-          Building Your Brand on Social Media
-          </ContentHeading>
-          <PageContent>
-          Social media is a powerful tool for building a brand identity. Businesses can use social media to engage with customers, create targeted campaigns, and promote their products or services.
-          </PageContent>
-          <PageContent>
-          There are many Social Media platforms available today. Following are the most active and famous platforms:
-          </PageContent>
-          <KeyPointsContainer>
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Meta (FB & Instagram)
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Twitter
-            </KeyPoint>
-
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              LinkedIn
-            </KeyPoint>
-            <KeyPoint>
-              <FontAwesomeIcon icon={faCheck} size="xl" />
-              Pinterest
-            </KeyPoint>
-          </KeyPointsContainer>
-
-        </ContentContainer>
-
-        <ContentContainer>
-          <PageContent>
-            In today's digital age, online branding is vital for any business's
-            success. Building a strong brand identity can set a business apart
-            from its competitors and create a lasting impression on customers.
-            Online branding refers to the process of creating a brand identity
-            through digital platforms, such as social media, search engines, and
-            website design
-          </PageContent>
-        </ContentContainer>
-        <ContentContainer>
-          <ContentHeading>
-            Branding Through SEO: How to Rank High on Search Engines
-          </ContentHeading>
-          <PageContent>
-          SEO is an important aspect of online branding. By optimizing the website for search engines, businesses can increase their visibility and reach a wider audience in an organic way.
-          </PageContent>
-          <PageContent>
-          There two types in SEO based on the nature of the business:</PageContent>
-          <PageContent>
-            Local SEO: For business serving to a limited radius
-          </PageContent>
-          <PageContent>
-          SERP SEO: Sometimes also called as Global SEO or just SEO, it is suited for the business serving without the geo-limits or broader radius (state, city).
-          </PageContent>
-        </ContentContainer>
-
-        <ContentContainer>
-          <ContentHeading>
-          Measuring the Effectiveness of Your Online Branding Efforts
-          </ContentHeading>
-          <PageContent>
-          Measuring the effectiveness of online branding efforts is essential for improving future campaigns. I use various tools, such as Google Analytics, Google Search Console, Semrush, SERPRobot to track website traffic, engagement, and conversions.
-          </PageContent>
-        </ContentContainer>
-
-        <ContentContainer>
-          <ContentHeading>
-            My Tip: Common Online Branding Mistakes to Avoid
-          </ContentHeading>
-          <PageContent>
-          There are several common online branding mistakes that businesses should avoid. One mistake is not having a clear brand message. Businesses must ensure that their brand message is consistent across all digital platforms. Another mistake is not engaging with customers on social media. Engaging with customers can help to build brand loyalty and increase customer satisfaction.
-          </PageContent>
-          <PageContent>
-          Another mistake is not optimizing their website for search engines. By neglecting SEO, businesses may be missing out on potential customers. Finally, businesses must avoid being too sales-focused in their online branding efforts. Customers want to engage with businesses that provide value and solve their problems, not just sell products or services.
-          </PageContent>  
-        </ContentContainer>
-
-        <ContentContainer>
-          <ContentHeading>
-          My Prediction: The Future of Online Branding in Digital Marketing
-          </ContentHeading>
-          <PageContent>
-          The future of online branding is promising. With advancements in technology, businesses will have even more opportunities to reach their target audience through various digital platforms. Additionally, businesses may use artificial intelligence (AI) to create more personalized and targeted campaigns.
-          </PageContent> 
+          <BottomContent>
+            <SubContentImg>
+              <Image src={Serviceimg2} alt="branding image" />
+            </SubContentImg>
+            <SubContent>
+              <ContentHeading>
+              My Prediction: The Future of Online Branding in Digital Marketing
+              </ContentHeading>
+              <PageContent>
+              The future of online branding is promising. With advancements in technology, businesses will have even more opportunities to reach their target audience through various digital platforms. Additionally, businesses may use artificial intelligence (AI) to create more personalized and targeted campaigns.
+              </PageContent> 
+            </SubContent>
+          </BottomContent> 
         </ContentContainer>
 
         <ContentContainer>

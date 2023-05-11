@@ -1,6 +1,6 @@
 import { faBuysellads, faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import {
-    faArrowRight,
+  faArrowRight,
   faArrowRightArrowLeft,
   faArrowRightLong,
   faChartLine,

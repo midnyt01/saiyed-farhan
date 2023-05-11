@@ -144,11 +144,14 @@ const Navbar = () => {
             >
               Services <FontAwesomeIcon icon={faChevronDown} />
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <Link href="/casestudies">Case Studies</Link>
-            </ListItem>
+            </ListItem> */}
             <ListItem>
               <Link href="/blogs">Blogs</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/contact-me">Contact Me</Link>
             </ListItem>
             <ServicesCard />
           </UnorderedList>

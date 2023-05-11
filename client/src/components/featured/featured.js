@@ -73,7 +73,7 @@ const Featured = () => {
     <Container>
       <Wrapper>
         <HeadingContainer>
-          <Heading>clients i have worked with so far</Heading>
+          <Heading>Niches i have worked on so far</Heading>
         </HeadingContainer>
         <ImageContainer>
           <Zoom>

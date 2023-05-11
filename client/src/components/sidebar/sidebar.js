@@ -49,10 +49,11 @@ const NavItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  text-align: center;
 `;
 
 const NavItems = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   a {
     color: white !important;
   }
@@ -77,6 +78,7 @@ const SocialContainer = styled.div`
   width: 100%;
   padding: 10px 20px;
   box-sizing: border-box;
+  font-size: 14px;
 `;
 
 const Social = styled.div`
@@ -86,6 +88,23 @@ const Social = styled.div`
   box-sizing: border-box;
   border-radius: 5px;
 `;
+
+const SidebarCtaButtons = styled.div`
+  margin-top: 15px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px 0 6px 0;
+    font-size: 14px
+  }
+`
 
 const Sidebar = () => {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(GlobalContext);
@@ -149,6 +168,10 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faAt} size="xl" />
           </Social>
         </SocialContainer>
+        <SidebarCtaButtons>
+          <Link href='/contact'>Request a Quote</Link>
+          <Link href='/contact'>Get Free Consultation</Link>
+        </SidebarCtaButtons>
       </Wrapper>
     </Container>
   );

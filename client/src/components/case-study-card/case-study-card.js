@@ -37,12 +37,12 @@ const ContentBody = styled.p`
     margin-top: 10px;
 `
 const InfoContainer = styled.div`
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 20px;
-font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
 `;
 
 const CategoryType = styled.div`
@@ -51,7 +51,6 @@ border: 1px solid white;
 border-radius: 5px;
 text-transform: capitalize;
 `;
-
 
 const AuthorName = styled.div`
     margin-top: 20px;
