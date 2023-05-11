@@ -145,22 +145,22 @@ const Services = () => {
             <ServiceLogo><FontAwesomeIcon icon={faLaptop} size="4x" /></ServiceLogo>
             <ServiceTitle>Branding</ServiceTitle>
             <ServiceDescription>
-              Aliquip eu et tempor occaecat est. Aliquip eu et tempor. 
+              Making your brand more visible and engaging. Suited to:
             </ServiceDescription>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              New Brands
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Existing Brands
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              New Projects
             </ServiceContent>
             <ServiceBottom>
-              <ServiceAction>Continue Reading</ServiceAction>
+              <ServiceAction>Learn More</ServiceAction>
               <Link href="/digital-marketing-services/branding"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
@@ -172,22 +172,22 @@ const Services = () => {
             <ServiceLogo><FontAwesomeIcon icon={faChartLine} size="4x" /></ServiceLogo>
             <ServiceTitle>Sales</ServiceTitle>
             <ServiceDescription>
-              Aliquip eu et tempor occaecat est. Aliquip eu et tempor.
+            Increase your online sales effectively. Suited to:
             </ServiceDescription>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Selling Products Locally
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Sellng Products Nationally
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Selling Products Globally
             </ServiceContent>
             <ServiceBottom>
-              <ServiceAction>Continue Reading</ServiceAction>
+              <ServiceAction>Learn More</ServiceAction>
               <Link href="/digital-marketing-services/sales"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
@@ -199,22 +199,22 @@ const Services = () => {
             <ServiceLogo><FontAwesomeIcon icon={faTrafficLight} size="4x"/></ServiceLogo>
             <ServiceTitle>Traffic</ServiceTitle>
             <ServiceDescription>
-              Aliquip eu et tempor occaecat est. Aliquip eu et tempor.
+            Get more users to land on your website. We do it via:
             </ServiceDescription>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              SEO
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              SEM
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              SMM
             </ServiceContent>
             <ServiceBottom>
-              <ServiceAction>Continue Reading</ServiceAction>
+              <ServiceAction>Learn More</ServiceAction>
               <Link href="/digital-marketing-services/traffic"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>
@@ -226,22 +226,22 @@ const Services = () => {
             <ServiceLogo><FontAwesomeIcon icon={faUsers} size="4x"/></ServiceLogo>
             <ServiceTitle>Leads</ServiceTitle>
             <ServiceDescription>
-              Aliquip eu et tempor occaecat est. Aliquip eu et tempor.
+              Get more leads of potential customers. Suited to:
             </ServiceDescription>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Real Estate Industry
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Finance Industry
             </ServiceContent>
             <ServiceContent>
               <FontAwesomeIcon icon={faCheck} style={{marginRight: '12px'}} />
-              Lorem ipsum dolor
+              Any Service Industry
             </ServiceContent>
             <ServiceBottom>
-              <ServiceAction>Continue Reading</ServiceAction>
+              <ServiceAction>Learn More</ServiceAction>
               <Link href="/digital-marketing-services/leads"><FontAwesomeIcon icon={faArrowRightLong} style={{cursor: 'pointer', color:'white'}} size="xl" /></Link>
             </ServiceBottom>
           </ServiceCard>

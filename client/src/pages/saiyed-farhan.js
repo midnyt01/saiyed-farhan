@@ -10,20 +10,16 @@ const Container = styled.div`
 `;
 
 const Heading  = styled.h1`
-    font-size: 40px;
-    @media (min-width: 800px) {
-        font-size: 5vw;
-    }
+    font-size: 22pxpx;
 `
 
 const Wrapper = styled.div`
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
         align-items: flex-start;
     column-gap: 50px;
     @media (min-width: 800px) {
-        margin-top: 80px;
         flex-direction: row;
     }
 `;
@@ -42,9 +38,9 @@ const ImageContainer = styled.div`
 `;
 
 const AboutContainer = styled.div`
-    flex: 2;
+    flex: 3.5;
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     line-height: 1.5;
     @media (min-width: 800px) {

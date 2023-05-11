@@ -153,6 +153,9 @@ const Navbar = () => {
             <ListItem>
               <Link href="/contact-me">Contact Me</Link>
             </ListItem>
+             <ListItem>
+              <Link href="/saiyed-farhan">About</Link>
+            </ListItem>
             <ServicesCard />
           </UnorderedList>
         </NavList>

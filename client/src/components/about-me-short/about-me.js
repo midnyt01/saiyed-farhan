@@ -59,7 +59,14 @@ const CallToAction = styled.div`
   margin-top: 30px;
   font-size: 20px;
   font-weight: bold;
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+
+  Link {
   cursor: pointer;
+  }
+
 `;
 
 const ImageContainer = styled.div`
@@ -96,13 +103,14 @@ const AboutMe = () => {
         <InfoContainer>
           <Title>Why You Should Hire Me</Title>
           <Content>
-            Ullamco in voluptate incididunt aute quis reprehenderit veniam esse
-            deserunt fugiat qui commodo. Dolor culpa esse adipisicing occaecat
-            incididunt laborum elit veniam amet labore amet incididunt mollit.
+          As a Digital Marketing Consultant, I bring a wealth of experience and knowledge to the table. I have a proven track record of delivering successful digital marketing campaigns for a variety of businesses and industries. My skills and expertise in areas such as SEO, SEM, SMM, and Content Marketing will help your business reach its full potential online.
           </Content>
           <CallToAction>
               <Link href="/saiyed-farhan">
               Hire Me Now !
+              </Link>
+              <Link href="/saiyed-farhan" style={{fontWeight: '400'}} >
+                Know Me More
               </Link>
           </CallToAction>
         </InfoContainer>

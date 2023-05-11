@@ -83,6 +83,33 @@ box-sizing: border-box;
 margin-top: 20px;
 `
 
+const settings = {
+  accessibility: true,
+  arrows: false,
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  cssEase: "ease",
+  draggable: true,
+  fade: false,
+  focusOnSelect: false,
+  pauseOnHover: true,
+  swipe: true,
+  touchMove: true,
+  touchThreshold: 5,
+  useCSS: true,
+  variableWidth: false,
+  vertical: true,
+  verticalSwiping: true,
+  adaptiveHeight: false
+};
+
+
 const HeroBanner = () => {
 
   return (
