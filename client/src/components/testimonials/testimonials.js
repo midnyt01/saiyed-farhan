@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import TestimonailCard from "../testimonial-card/testimonial-card";
+import { useEffect, useState } from "react";
+import { httpGetAllTestimonials } from "@/utils/api";
 
 const Container = styled.div`
   width: 90%;
@@ -91,14 +93,26 @@ const TESTIMONIALS = [
 ];
 
 const Testimonials = () => {
+
+  const [allTestimonials, setAllTestimonials] = useState([]);
+
+  useEffect(() => {
+    async function getTestimonialArray () {
+      let response = await httpGetAllTestimonials();
+      console.log({response})
+      setAllTestimonials(response);
+    }
+    getTestimonialArray();
+  }, [])
+
   return (
     <Container>
       <Wrapper>
         <Title>what people say about me</Title>
         <TestimoniesContainer>
           <TestimoniesWrapper>
-            {TESTIMONIALS.map((testimonial) => {
-              return <TestimonailCard key={testimonial} id={testimonial} />;
+            {allTestimonials.map((testimonial) => {
+              return <TestimonailCard key={testimonial.author_name} testimonial={testimonial} />;
             })}
           </TestimoniesWrapper>
         </TestimoniesContainer>

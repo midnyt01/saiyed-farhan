@@ -12,6 +12,9 @@ const Container = styled.div`
   margin-top: 80px;
   display: flex;
   column-gap: 30px;
+  @media (max-width: 800px) {
+    margin-top: 20px;
+  }
 `;
 
 const BrandingPage = () => {

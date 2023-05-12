@@ -17,6 +17,7 @@ const {
   httpGetAllCommentsOnBlog,
   httpReplyOnBlogComment,
   httpGetAllRepliesOnBlogComment,
+  httpGetTestitmonials,
 } = require("./customer.controller");
 
 const customerRouter = express.Router();
@@ -42,6 +43,8 @@ customerRouter.post("/blogs/comments/replies", httpReplyOnBlogComment);
 
 customerRouter.get("/casestudies", httpGetAllCaseStudies)
 customerRouter.get("/casestudies/:id", httpGetCaseStudyById)
+
+customerRouter.get("/testimonials", httpGetTestitmonials)
 
 //leads
 customerRouter.post("/contactme", httpPostContactMe)

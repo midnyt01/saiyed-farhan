@@ -60,11 +60,19 @@ const CallToAction = styled.div`
   font-size: 20px;
   font-weight: bold;
   display: flex;
-  width: 55%;
+  width: 60%;
   justify-content: space-between;
 
-  Link {
-  cursor: pointer;
+  a {
+  border: 2px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  transition: 0.2s all ease;
+  &:hover {
+      background: black;
+      color: white;
+    }
   }
 
 `;
@@ -106,10 +114,10 @@ const AboutMe = () => {
           As a Digital Marketing Consultant, I bring a wealth of experience and knowledge to the table. I have a proven track record of delivering successful digital marketing campaigns for a variety of businesses and industries. My skills and expertise in areas such as SEO, SEM, SMM, and Content Marketing will help your business reach its full potential online.
           </Content>
           <CallToAction>
-              <Link href="/saiyed-farhan">
+              <Link href="/online-marketing-consultant">
               Hire Me Now !
               </Link>
-              <Link href="/saiyed-farhan" style={{fontWeight: '400'}} >
+              <Link href="/online-marketing-consultant" style={{fontWeight: '400'}} >
                 Know Me More
               </Link>
           </CallToAction>

@@ -146,7 +146,10 @@ const Sidebar = () => {
             <Link href="/blogs">Blogs</Link>
           </NavItems>
           <NavItems onClick={toggleSidebar}>
-            <Link href="/casestudies">CaseStudies</Link>
+            <Link href="/contact-me">Contact Me</Link>
+          </NavItems>
+          <NavItems onClick={toggleSidebar}>
+            <Link href="/online-marketing-consultant">About</Link>
           </NavItems>
         </NavItemContainer>
         {/* <PoliciesContainer>

@@ -154,7 +154,7 @@ const Navbar = () => {
               <Link href="/contact-me">Contact Me</Link>
             </ListItem>
              <ListItem>
-              <Link href="/saiyed-farhan">About</Link>
+              <Link href="/online-marketing-consultant">About</Link>
             </ListItem>
             <ServicesCard />
           </UnorderedList>

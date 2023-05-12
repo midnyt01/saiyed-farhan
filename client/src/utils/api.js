@@ -92,6 +92,13 @@ async function httpPostContactDetails (formDetails) {
     return await response.json()
 }
 
+async function httpGetAllTestimonials () {
+    const response = await fetch(`${API}/testimonials`, {
+        method: "get"
+    })
+    return await response.json()
+}
+
 
 
 export {
@@ -104,5 +111,6 @@ export {
     httpPostCommentOnBlog,
     httpPostReplyOnBlogComment,
     httpPostContactDetails,
+    httpGetAllTestimonials
     
 }

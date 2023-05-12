@@ -6,6 +6,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Fade } from "react-reveal";
+import Image from "next/image";
 
 const Container = styled.div`
   width: 280px;
@@ -34,6 +35,7 @@ const Review = styled.p`
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 1.3;
+  height: 250px;
 `;
 
 const ReviewerContainer = styled.div`
@@ -51,8 +53,12 @@ const ReviewerImage = styled.div`
   background-color: lightgray;
   border-radius: 50%;
   box-sizing: border-box;
-  padding: 2px 6px;
   color: black;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 const ReviewerInfo = styled.div`
   width: 100%;
@@ -68,7 +74,8 @@ const ReviewerWork = styled.p`
   color: gray;
 `;
 
-const TestimonailCard = ({ id }) => {
+const TestimonailCard = ({ testimonial }) => {
+  const {author_name, text, profile_photo_url} = testimonial
   return (
     <Fade right>
       <Container>
@@ -80,19 +87,19 @@ const TestimonailCard = ({ id }) => {
               size="xl"
               style={{ marginRight: "7px" }}
             />
-            Excepteur consectetur aliqua ex commodo id labore enim sit aute ex
-            cillum.px 20Nulla occaecat magna consectetur aliqua ex
+            {text}
           </Review>
         </ReviewContainer>
         <ReviewerContainer>
           <ReviewerImageContainer>
             <ReviewerImage>
-              <FontAwesomeIcon icon={faUser} size="2xl" />
+              {/* <FontAwesomeIcon icon={faUser} size="2xl" /> */}
+              <Image src={profile_photo_url} alt={author_name} width={100} height={100} />
             </ReviewerImage>
           </ReviewerImageContainer>
           <ReviewerInfo>
-            <ReviewerName>Shailja Pandey</ReviewerName>
-            <ReviewerWork>UI Design</ReviewerWork>
+            <ReviewerName>{author_name}</ReviewerName>
+            {/* <ReviewerWork>UI Design</ReviewerWork> */}
           </ReviewerInfo>
         </ReviewerContainer>
       </Wrapper>
