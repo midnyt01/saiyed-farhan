@@ -27,7 +27,7 @@ const HeadingContainer = styled.div`
   width: 100%;
 `;
 
-const Heading = styled.div`
+const Heading = styled.h1`
   font-size: 40px;
   text-transform: uppercase;
   width: 90%;
@@ -51,14 +51,24 @@ const ImageContainer = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  img {
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    @media (min-width: 800px) {
-      height: 120px;
+  width: 100%;
+  text-transform: uppercase;
+  border: 3px solid;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 7px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+      transform: scale(1.1);
     }
-  }
+
 `;
 
 const HR = styled.hr`
@@ -73,37 +83,37 @@ const Featured = () => {
     <Container>
       <Wrapper>
         <HeadingContainer>
-          <Heading>Niches i have worked on so far</Heading>
+          <Heading>EXEPRTISE IN NICHE</Heading>
         </HeadingContainer>
         <ImageContainer>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client1} alt="client 1" />
+              E-Com
             </ImageWrapper>
           </Zoom>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client2} alt="client 1" />
+              Medical
             </ImageWrapper>
           </Zoom>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client1} alt="client 1" />
+              Finance
             </ImageWrapper>
           </Zoom>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client2} alt="client 1" />
+              Recycling
             </ImageWrapper>
           </Zoom>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client1} alt="client 1" />
+              PROFESSIONALS
             </ImageWrapper>
           </Zoom>
           <Zoom>
             <ImageWrapper>
-              <Image src={Client2} alt="client 1" />
+              SAAS
             </ImageWrapper>
           </Zoom>
         </ImageContainer>

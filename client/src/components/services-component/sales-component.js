@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import CoverImage from "../../assets/cover_image.jpg";
+import CoverImage from "../../assets/sales-banner.jpg";
 import BlogComments from "../blog-comments/blog-comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";

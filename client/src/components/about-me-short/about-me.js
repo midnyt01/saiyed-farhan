@@ -114,9 +114,6 @@ const AboutMe = () => {
           As a Digital Marketing Consultant, I bring a wealth of experience and knowledge to the table. I have a proven track record of delivering successful digital marketing campaigns for a variety of businesses and industries. My skills and expertise in areas such as SEO, SEM, SMM, and Content Marketing will help your business reach its full potential online.
           </Content>
           <CallToAction>
-              <Link href="/online-marketing-consultant">
-              Hire Me Now !
-              </Link>
               <Link href="/online-marketing-consultant" style={{fontWeight: '400'}} >
                 Know Me More
               </Link>

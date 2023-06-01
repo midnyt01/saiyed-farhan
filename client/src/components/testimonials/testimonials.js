@@ -1,13 +1,30 @@
 import styled from "styled-components";
 import TestimonailCard from "../testimonial-card/testimonial-card";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { httpGetAllTestimonials } from "@/utils/api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   width: 90%;
   margin: auto;
   margin-top: 50px;
+  position: relative;
 `;
+
+const LeftArrow = styled.div`
+  position: absolute;
+  left: 0;
+  top: 40%;
+  cursor: pointer;
+`
+
+const RightArrow = styled.div`
+  position: absolute;
+  right: 0;
+  top: 40%;
+  cursor: pointer;
+`
 
 const Wrapper = styled.div`
   width: 90%;
@@ -94,6 +111,8 @@ const TESTIMONIALS = [
 
 const Testimonials = () => {
 
+  const Slider = useRef();
+
   const [allTestimonials, setAllTestimonials] = useState([]);
 
   useEffect(() => {
@@ -105,11 +124,41 @@ const Testimonials = () => {
     getTestimonialArray();
   }, [])
 
+  const handleScrollLeft = (scrollToLeft) => {let scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        Slider.current.scrollLeft -= 10;
+        scrollAmount += 10;
+        if(scrollAmount >= 350){
+            window.clearInterval(slideTimer);
+        }
+    }, 10);
+    // Slider.current.scrollLeft += scrollToLeft;
+  }
+
+  const handleScrollRight = (scrollToRight) => {
+    let scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        Slider.current.scrollLeft += 10;
+        scrollAmount += 10;
+        if(scrollAmount >= 350){
+            window.clearInterval(slideTimer);
+        }
+    }, 10);
+    // Slider.current.scrollLeft += scrollToRight;
+    // console.log(Slider.current)
+  }
+
   return (
     <Container>
+      <LeftArrow onClick={() => handleScrollLeft(-350)}>
+        <FontAwesomeIcon icon={faChevronLeft} size="3x" />
+      </LeftArrow>
+      <RightArrow onClick={() => handleScrollRight(350)}>
+        <FontAwesomeIcon icon={faChevronRight} size="3x" />
+      </RightArrow>
       <Wrapper>
         <Title>what people say about me</Title>
-        <TestimoniesContainer>
+        <TestimoniesContainer ref={Slider} >
           <TestimoniesWrapper>
             {allTestimonials.map((testimonial) => {
               return <TestimonailCard key={testimonial.author_name} testimonial={testimonial} />;

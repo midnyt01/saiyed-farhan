@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
-import CoverImage from "../../assets/cover_image.jpg";
+import CoverImage from "../../assets/branding-banner.jpg";
 import Serviceimg from "../../assets/target-audience.png";
 import Serviceimg1 from "../../assets/lightbulb.png";
 import Serviceimg2 from "../../assets/business.png";

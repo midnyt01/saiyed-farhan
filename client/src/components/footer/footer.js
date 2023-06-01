@@ -42,6 +42,7 @@ const LogoContainer = styled.div``;
 
 const LogoTitle = styled.div`
 font-size: 25px;
+color: white;
 text-transform: uppercase;
 font-weight: bold;
 letter-spacing: 0.5px;
@@ -132,7 +133,8 @@ const Footer = () => {
                     <Image src={MainLogo} alt="saiyed farhan" width={100} />
                     <LogoTitle>Saiyed<br /> Farhan</LogoTitle>
                     <LinkItem href=""> 
-                        Lorem ipsum dolore sit amet, consectetur
+                    Online Markting Consultant +91-8767609584
+
                     </LinkItem>
                 </LogoContainer>
                 <div>
