@@ -153,6 +153,9 @@ const ContactInfoContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   column-gap: 50px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const ContactInfoTitle = styled.div`
@@ -246,7 +249,6 @@ const ContactMePage = () => {
           content="If you have any query or want to discuss anything related to online marketing, feel free to contact!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex,nofollow"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>

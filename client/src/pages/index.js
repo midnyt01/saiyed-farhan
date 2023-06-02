@@ -17,18 +17,6 @@ const metaDesc =
   "a blogsite on digital marketing by saiyed farhan marketing correctely";
 
 export default function Home() {
-  const router = useRouter();
-
-  const { isLogin } = useContext(GlobalContext);
-
-  if (!isLogin) {
-    useEffect(() => {
-      if (!isLogin) {
-        router.push("/login");
-      }
-    }, [isLogin, router]);
-    return null;
-  }
 
   return (
     <>
@@ -50,7 +38,6 @@ export default function Home() {
           content="Elevate your online presence with me - Expert Digital Marketing Consultant. Drive traffic, and increase leads and sales. Get in touch now."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex,nofollow"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <noscript

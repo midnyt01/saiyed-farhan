@@ -16,26 +16,14 @@ const Container = styled.div`
 `;
 
 const SalesPage = () => {
-  const router = useRouter();
-
-  const {isLogin} = useContext(GlobalContext)
-
-  if (!isLogin) {
-    useEffect(() => {
-      if (!isLogin) {
-        router.push('/login');
-      }
-    }, [isLogin, router])
-    return null;
-  }
-
 
   return (
     <>
     <Head>
       <title>Online Sales -  Data-Oriented Digital Marketing Service</title>
       <meta name="description" content=" Increase your sales and revenue by availing the best and data-oriented  digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
-    <meta name="robots" content="noindex,nofollow"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
     </Head>
       <Container>
       <SalesComponent />

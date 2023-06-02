@@ -17,26 +17,13 @@ const Container = styled.div`
 
 const TrafficPage = () => {
 
-  const router = useRouter();
-
-  const {isLogin} = useContext(GlobalContext)
-
-  if (!isLogin) {
-    useEffect(() => {
-      if (!isLogin) {
-        router.push('/login');
-      }
-    }, [isLogin, router])
-    return null;
-  }
-
-
   return (
     <>
     <Head>
     <title> Increase Website Traffic - Digital Marketing ServiceProven Strategies</title>
       <meta name="description" content=" Increase your website traffic by availing the best and proven digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
-    <meta name="robots" content="noindex,nofollow"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container>
       <TrafficComponent />

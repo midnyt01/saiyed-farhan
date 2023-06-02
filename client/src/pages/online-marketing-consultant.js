@@ -27,7 +27,6 @@ const Wrapper = styled.div`
 
 const ImageContainer = styled.div`
     width: 100%;
-    margin: auto;
     flex: 1;
     @media (min-width: 800px) {
         width: 90%;
@@ -36,12 +35,15 @@ const ImageContainer = styled.div`
     img {
         width: 80%;
         height: 100%;
+        @media (max-width: 800px) {
+        width: 100%;
+    }
     }
 `;
 
 const AboutContainer = styled.div`
     flex: 3.5;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -66,7 +68,6 @@ const SaiyedFarhan = () => {
           content="Know about Saiyed Farhan - Digital Marketing Consultant from India."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex,nofollow"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Container>

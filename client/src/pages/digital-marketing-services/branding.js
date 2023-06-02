@@ -19,27 +19,13 @@ const Container = styled.div`
 
 const BrandingPage = () => {
 
-  const router = useRouter();
-
-  const {isLogin} = useContext(GlobalContext)
-
-  if (!isLogin) {
-    useEffect(() => {
-      if (!isLogin) {
-        router.push('/login');
-      }
-    }, [isLogin, router])
-    return null;
-  }
-
-
-
   return (
     <>
     <Head>
       <title>Branding: Digital Marketing Service - 100% Proven Strategies</title>
       <meta name="description" content="Transform your business into Brand with my branding service. Stand out from the competition and attract your target audience. Contact us today!" />
-    <meta name="robots" content="noindex,nofollow"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container>
       <BrandingComponent />
