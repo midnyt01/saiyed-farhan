@@ -10,9 +10,9 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 import CoverImage from "../../assets/branding-banner.jpg";
-import Serviceimg from "../../assets/target-audience.png";
-import Serviceimg1 from "../../assets/lightbulb.png";
-import Serviceimg2 from "../../assets/business.png";
+import Serviceimg from "../../assets/icons/target-audience.png";
+import Serviceimg1 from "../../assets/icons/lightbulb.png";
+import Serviceimg2 from "../../assets/icons/business.png";
 
 const Container = styled.div`
   flex: 8;

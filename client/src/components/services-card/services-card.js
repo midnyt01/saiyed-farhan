@@ -18,7 +18,7 @@ import styled from "styled-components";
 const Container = styled.div`
   background: white;
   position: absolute;
-  right: 540px;
+  right: 450px;
   width: 180px;
   max-height: 250px;
   top: ${(props) => props.top};

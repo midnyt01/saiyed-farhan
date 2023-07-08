@@ -9,7 +9,7 @@ import Link from "next/link";
 const Container = styled.div`
     width: 100%;
     margin-top: 70px;
-    background: black;
+    background: #000;
     box-sizing: border-box;
     padding: 40px 10px;
     @media (min-width: 800px) {
@@ -26,42 +26,41 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     @media (min-width: 800px) {
         flex-direction: row;
-        height: 450px;
+        height: 350px;
     }
 `;
 
 const MainContainer = styled.div`
-width: 220px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 `;
 
 const LogoContainer = styled.div``;
 
 const LogoTitle = styled.div`
-font-size: 25px;
-color: white;
-text-transform: uppercase;
-font-weight: bold;
-letter-spacing: 0.5px;
-margin-top: 10px;
-margin-bottom: 10px;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
 
 const ExtraLinksContainer = styled.div`
-width: 100%;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-gap: 20px;
-margin-top: 50px;
-@media (min-width: 800px) {
-    grid-template-columns: repeat(5, 1fr);
-    margin-left: 100px;
-    margin-top: 115px;
-        
-}
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 10px;
+    @media (min-width: 800px) {
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: 100px;
+            
+    }
 `;
 
 const SectionWrapper = styled.div``;
@@ -73,53 +72,53 @@ const NewsletterWrapper = styled.div`
 `;
 
 const LinkHeader = styled.div`
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 15px;
-letter-spacing: 0.5px;
-color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    color: white;
 `;
 
 const LinkItem = styled(Link)`
-font-size: 16px;
-color: lightgray !important;
-margin: 10px 0;
-letter-spacing: 0.5px;
-cursor: pointer;
-display: block;
+    font-size: 16px;
+    color: lightgray !important;
+    margin: 10px 0;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: block;
 `;
 
 const NewsletterInput = styled.input`
-border: 1px solid white;
-box-sizing: border-box;
-padding: 5px;
-background: transparent;
-color: white;
-margin-top: 5px;
-width:70%;
-@media (min-width: 800px) {
-    width: 100%;
-    margin-top: 15px;
-}
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 5px;
+    background: transparent;
+    color: white;
+    margin-top: 5px;
+    width:70%;
+    @media (min-width: 800px) {
+        width: 100%;
+        margin-top: 15px;
+    }
 `;
 
 const NewsletterSubmit = styled.button`
-border: none;
-box-sizing: border-box;
-padding: 5px 25px;
-margin-top: 15px;
-font-weight: 400;
-letter-spacing: 0.8px;
+    border: none;
+    box-sizing: border-box;
+    padding: 5px 25px;
+    margin-top: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
 `;
 
 const HR = styled.hr`
-width: 85%;
-margin-right: 30px;
-box-sizing: border-box;
-margin: auto;
-margin-top: 30px;
-@media (min-width: 800px) {
-margin-top: 0;
+    width: 85%;
+    margin-right: 30px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 30px;
+    @media (min-width: 800px) {
+        margin-top: 0;
     }
 `
 
@@ -137,10 +136,6 @@ const Footer = () => {
 
                     </LinkItem>
                 </LogoContainer>
-                <div>
-                    <FontAwesomeIcon icon={faCopyright} />
-                    <LinkItem href="/"> Terms & Conditions</LinkItem>
-                </div>
             </MainContainer>
             <ExtraLinksContainer>
                 <SectionWrapper>

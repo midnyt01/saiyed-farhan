@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import Redface from "../assets/angry-bird-face-red.jpg"
-import Blueblue from "../assets/angry-bird-face-blue.jpg"
-import Greenface from "../assets/angry-bird-face-green.jpg"
-import Yellowface from "../assets/angry-bird-face-yellow.jpg"
-import Blackface from "../assets/angry-bird-face-black.jpg"
+// import Redface from "../assets/angry-bird-face-red.jpg"
+// import Blueblue from "../assets/angry-bird-face-blue.jpg"
+// import Greenface from "../assets/angry-bird-face-green.jpg"
+// import Yellowface from "../assets/angry-bird-face-yellow.jpg"
+// import Blackface from "../assets/angry-bird-face-black.jpg"
 
-const USER_ICON_ARRAY = [Redface, Blueblue, Yellowface,Blackface]
+// const USER_ICON_ARRAY = [Redface, Blueblue, Yellowface,Blackface]
 
 export const GlobalContext = createContext({
   theme: null,
@@ -53,12 +53,12 @@ export const GlobalProvider = ({ children }) => {
 
 
 //user faces
-  useEffect(() => {
-    function chooseRandomFace(array) {
-      return array[Math.floor(Math.random() * array.length)];
-    }
-    setUserFace(chooseRandomFace(USER_ICON_ARRAY))
-  }, [])
+  // useEffect(() => {
+  //   function chooseRandomFace(array) {
+  //     return array[Math.floor(Math.random() * array.length)];
+  //   }
+  //   setUserFace(chooseRandomFace(USER_ICON_ARRAY))
+  // }, [])
 
   useEffect(() => {
 

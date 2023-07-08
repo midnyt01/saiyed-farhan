@@ -13,8 +13,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Sidebar from "../sidebar/sidebar";
 import { GlobalContext } from "@/context/global.context";
-import ThemeToggle from "../theme-toggle/theme-toggle";
-import ProfileInfo from "../profile-info/profile-info";
+// import ThemeToggle from "../theme-toggle/theme-toggle";
+// import ProfileInfo from "../profile-info/profile-info";
 import ServicesCard from "../services-card/services-card";
 // import Sidebar from '../sidebar/sidebar';
 
@@ -94,6 +94,7 @@ const ExtraItems = styled.div`
 `;
 
 const SidebarIconContainer = styled.div`
+  cursor: pointer;
 `;
 
 const Navbar = () => {
@@ -159,21 +160,6 @@ const Navbar = () => {
             <ServicesCard />
           </UnorderedList>
         </NavList>
-        <ExtraItemContainer>
-          <ExtraItems>
-            {/* <ThemeToggle /> */}
-          </ExtraItems>
-          <ExtraItems onClick={toggleProfileInfoTab}>
-            <Image
-              src={userFace}
-              alt="user"
-              width={40}
-              height={40}
-              style={{ color: theme == "light" ? "black" : "white" }}
-            />
-          </ExtraItems>
-          <ProfileInfo />
-        </ExtraItemContainer>
         <SidebarIconContainer onClick={toggleSidebar}>
           <FontAwesomeIcon icon={faBars} size="xl" />
         </SidebarIconContainer>

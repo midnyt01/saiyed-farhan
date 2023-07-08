@@ -1,7 +1,7 @@
-import { faBuysellads, faSalesforce } from "@fortawesome/free-brands-svg-icons";
+// import { faBuysellads, faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import {
-  faArrowRight,
-  faArrowRightArrowLeft,
+  // faArrowRight,
+  // faArrowRightArrowLeft,
   faArrowRightLong,
   faChartLine,
   faCheck,
@@ -9,11 +9,17 @@ import {
   faTrafficLight,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Slide } from "react-reveal";
 import styled from "styled-components";
+
+import Branding from '../../assets/icons/brand.png';
+import Sales from '../../assets/icons/market-share.png';
+import Traffic from '../../assets/icons/traffic-light.png';
+import Leads from '../../assets/icons/user-engagement.png';
 
 const Container = styled.div`
     width: 95%;
@@ -64,7 +70,11 @@ box-sizing: border-box;
 padding: 50px;
 `;
 
-const ServiceLogo = styled.div``;
+const ServiceLogo = styled.div`
+  img {
+    width: 100px;
+  }
+`;
 
 const ServiceTitle = styled.div`
 margin-top: 7px;
@@ -142,7 +152,15 @@ const Services = () => {
         <ServicesContainer>
           <Slide bottom>
           <ServiceCard>
-            <ServiceLogo><FontAwesomeIcon icon={faLaptop} size="4x" /></ServiceLogo>
+            <ServiceLogo>
+              <Image
+                src={Branding}
+                alt="Icon for Branding Stage"
+                width={100}
+                height={100}
+                unoptimized
+              />
+            </ServiceLogo>
             <ServiceTitle>Branding</ServiceTitle>
             <ServiceDescription>
               Making your brand more visible and engaging. Suited to:
@@ -169,7 +187,15 @@ const Services = () => {
           {/* Service 2  */}
           <Slide bottom>
           <ServiceCard>
-            <ServiceLogo><FontAwesomeIcon icon={faChartLine} size="4x" /></ServiceLogo>
+            <ServiceLogo>
+              <Image
+                src={Sales}
+                alt="Icon for Branding Stage"
+                width={100}
+                height={100}
+                unoptimized
+              />
+            </ServiceLogo>
             <ServiceTitle>Sales</ServiceTitle>
             <ServiceDescription>
             Increase your online sales effectively. Suited to:
@@ -196,7 +222,15 @@ const Services = () => {
           {/* Service 3 */}
           <Slide bottom>
           <ServiceCard>
-            <ServiceLogo><FontAwesomeIcon icon={faTrafficLight} size="4x"/></ServiceLogo>
+            <ServiceLogo>
+              <Image
+                src={Traffic}
+                alt="Icon for Branding Stage"
+                width={100}
+                height={100}
+                unoptimized
+              />
+            </ServiceLogo>
             <ServiceTitle>Traffic</ServiceTitle>
             <ServiceDescription>
             Get more users to land on your website. We do it via:
@@ -223,7 +257,15 @@ const Services = () => {
           {/* Service 4 */}
           <Slide bottom>
           <ServiceCard>
-            <ServiceLogo><FontAwesomeIcon icon={faUsers} size="4x"/></ServiceLogo>
+            <ServiceLogo>
+              <Image
+                src={Leads}
+                alt="Icon for Branding Stage"
+                width={100}
+                height={100}
+                unoptimized
+              />
+            </ServiceLogo>
             <ServiceTitle>Leads</ServiceTitle>
             <ServiceDescription>
               Get more leads of potential customers. Suited to:

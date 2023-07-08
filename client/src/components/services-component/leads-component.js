@@ -7,7 +7,7 @@ import styled from "styled-components";
 import CoverImage from "../../assets/leads-baner.jpg";
 import BlogComments from "../blog-comments/blog-comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   flex: 8;
@@ -17,6 +17,16 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
+`;
+
+const ServiceIntro = styled.div`
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const CoverImageContainer = styled.div`
@@ -50,6 +60,22 @@ const ContentContainer = styled.div`
   margin: auto;
   margin-top: 40px;
 `;
+
+const PageContentBold = styled.div`
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+`;
+
+const QuoteIcon = styled.span`
+  svg {
+    width: 60px;
+    font-size: 36px;
+  }
+`;
+
 const ContentHeading = styled.h2`
   font-size: 20px;
   text-transform: capitalize;
@@ -78,6 +104,25 @@ const KeyPoint = styled.div`
   margin-top: 7px;
 `;
 
+const MobileCtaContainer = styled.div`
+  width: 75%;
+  height: 120px;
+  margin: 35px auto;
+  background-color: #282828;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  a {
+    background-color: #95de4c;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  // }
+`;
+
 const LeadsComponent = () => {
   return (
     <Container>
@@ -85,30 +130,33 @@ const LeadsComponent = () => {
         <title>Leads Page</title>
         <meta name="description" content="Branding Page" />
       </Head>
-      <Wrapper>
-        <CoverImageContainer>
-          <Image
-            src={CoverImage}
-            alt="blog cover image"
-            width={100}
-            height={100}
-            unoptimized
-          />
-        </CoverImageContainer>
-        <BlogHeadContainer>
+      <BlogHeadContainer>
           <BlogHeading>
             Generate Online Leads via Digital Marketing Services
           </BlogHeading>
         </BlogHeadContainer>
         <HR />
-        <ContentContainer>
-          <PageContent>
-            As a digital marketing consultant, I have seen firsthand the impact
-            that online marketing can have on lead generation. In today's
-            digital age, it is essential for businesses to have a strong online
-            presence if they want to attract new leads and customers.
-          </PageContent>
-        </ContentContainer>
+      <Wrapper>
+        <ServiceIntro>
+          <CoverImageContainer>
+            <Image
+              src={CoverImage}
+              alt="blog cover image"
+              width={100}
+              height={100}
+              unoptimized
+            />
+          </CoverImageContainer>
+          <ContentContainer>
+            <PageContentBold>
+            <QuoteIcon><FontAwesomeIcon icon={faQuoteLeft}/></QuoteIcon>
+              As a digital marketing consultant, I have seen firsthand the impact
+              that online marketing can have on lead generation. In today's
+              digital age, it is essential for businesses to have a strong online
+              presence if they want to attract new leads and customers.
+            </PageContentBold>
+          </ContentContainer>
+        </ServiceIntro>
 
         <ContentContainer>
           <ContentHeading>
@@ -172,6 +220,10 @@ const LeadsComponent = () => {
             highly relevant to your target audience and provide real value.
           </PageContent>
         </ContentContainer>
+
+        <MobileCtaContainer>
+          <Link href="/">Request a quote</Link>
+        </MobileCtaContainer>
 
         <ContentContainer>
           <ContentHeading>
