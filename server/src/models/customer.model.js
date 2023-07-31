@@ -151,7 +151,7 @@ async function CreateBlogPostByCustomer(blogDetails, callback) {
 }
 
 async function getAllBlogs(callback) {
-  let sql = 'SELECT * FROM blogs';
+  let sql = `SELECT * FROM blogs WHERE IsDeleted = ${0}`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);

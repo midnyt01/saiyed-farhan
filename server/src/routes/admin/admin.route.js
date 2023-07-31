@@ -15,6 +15,9 @@ const {
   httpPostCaseStudy,
   httpGetAllCaseStudies,
   httpGetAllLeads,
+  httpUpdateBlog,
+  httpDeleteBlog,
+  httpGetBlogById,
 } = require("./admin.controller");
 
 const adminRouter = express.Router();
@@ -43,7 +46,10 @@ adminRouter.post("/login", httpLoginAdmin);
 
 adminRouter.post("/blogcoverimage", upload.single('file'), httpUploadBlogCoverImage);
 adminRouter.post("/blogs", fetchAdmin, httpPostBlog);
-// adminRouter.get("/blogs", fetchAdmin, httpGetAllBlogs);
+adminRouter.get("/blogs", fetchAdmin, httpGetAllBlogs);
+adminRouter.get("/blogs/:id", fetchAdmin, httpGetBlogById)
+adminRouter.put("/blogs/:id", fetchAdmin, httpUpdateBlog);
+adminRouter.put("/delete-blog/:id", fetchAdmin, httpDeleteBlog)
 
 //case study
 adminRouter.post("/casecoverimage", upload.single('file'), httpUploadBlogCoverImage);

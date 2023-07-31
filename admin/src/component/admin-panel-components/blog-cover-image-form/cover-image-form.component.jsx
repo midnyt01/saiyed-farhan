@@ -74,7 +74,7 @@ const CoverImageForm = ({type}) => {
     console.log(formData)
     //if cover image form is from blog then do this
     if (type == "blog") {
-      fetch('http://localhost:8000/admin/coverimage', {
+      fetch('https://api.saiyedfarhan.com/admin/coverimage', {
       method: 'POST',
       body: formData
     })

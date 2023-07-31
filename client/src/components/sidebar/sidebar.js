@@ -49,27 +49,31 @@ const NavItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  text-align: center;
+  text-align: left;
 `;
-
 const NavItems = styled.div`
-  font-size: 14px;
+  position: relative;
   a {
     color: white !important;
+    font-size: 14px;
   }
-`;
 
-const PoliciesContainer = styled.div`
-  display: flex;
-  column-gap: 10px;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  font-size: 16ppx;
-`;
-const Policy = styled.p`
-  margin: 0;
-  flex: 1;
-  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the position of the underline if needed */
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #fff; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
 `;
 
 const SocialContainer = styled.div`
@@ -152,11 +156,6 @@ const Sidebar = () => {
             <Link href="/online-marketing-consultant">About</Link>
           </NavItems>
         </NavItemContainer>
-        {/* <PoliciesContainer>
-          <Policy>Privacy Policy</Policy>
-          <Policy>Terms and Conditions</Policy>
-          <Policy>Return and refund policy</Policy>
-        </PoliciesContainer> */}
         <SocialContainer>
           <Social>
             <FontAwesomeIcon icon={faWhatsapp} size="xl" />

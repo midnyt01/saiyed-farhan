@@ -15,16 +15,19 @@ import { Slide } from "react-reveal";
 
 
 const Container = styled.div`
-width: 100%;
-margin-top: 30px;
+  width: 100%;
+  margin-top: 30px;
 `;
 
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
 
 `;
 const SliderContainer = styled.div`
@@ -33,7 +36,7 @@ const SliderContainer = styled.div`
     margin: auto;
     margin-top: 50px;
     @media (min-width: 800px) {
-        margin: 0;
+        // margin: 0;
         margin-top: 50px;
     }
 `;
@@ -115,7 +118,7 @@ const HeroBanner = () => {
   return (
     <Container>
       <Wrapper>
-      {/* <SliderContainer>
+      <SliderContainer>
           <Slider {...settings}>
             <div className="hero-img-wrapper">
               <Image src={HeroImg} width={350} alt="Hero banner" style={{borderRadius: '12px'}} />
@@ -129,7 +132,7 @@ const HeroBanner = () => {
               <Image src={HeroImg2} width={350} alt="Hero banner" style={{borderRadius: '12px'}} />
             </div>
           </Slider>
-        </SliderContainer> */}
+        </SliderContainer>
         <HeroBannerContainer>
           <Slide right duration={1500}>
             <Title>SAIYED</Title>
@@ -140,50 +143,10 @@ const HeroBanner = () => {
             <Subtitle>Marketing Correctly</Subtitle>
             </Slide>
         </HeroBannerContainer>
-        <HR />
+        {/* <HR /> */}
       </Wrapper>
     </Container>
   );
 };
 
 export default HeroBanner;
-
-{
-  /* <div>
-      <div className="hero-wrapper w-90 m-auto">
-        <Slider {...settings}>
-          <div className="hero-img-wrapper">
-            <img src={HeroImg} alt="Hero banner" />
-            <Link href="//all-categories" className="btn cta-btn-bg light-text">
-              Shop now
-              <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-            </Link>
-          </div>
-
-          <div className="hero-img-wrapper">
-            <img src={HeroImg1} alt="Hero banner" />
-            <Link href="//all-categories" className="btn cta-btn-bg light-text">
-              Shop now
-              <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-            </Link>
-          </div>
-
-          <div className="hero-img-wrapper">
-            <img src={HeroImg2} alt="Hero banner" />
-            <Link href="//all-categories" className="btn cta-btn-bg light-text">
-              Shop now
-              <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-            </Link>
-          </div>
-        </Slider>
-        <div className="hero-text mb-3">
-          <h1>
-            SAIYED
-            <br />
-            FARHAN
-          </h1>
-          <h2>Marketing Correctly</h2>
-        </div>
-      </div>
-    </div> */
-}

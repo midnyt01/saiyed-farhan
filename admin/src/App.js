@@ -21,6 +21,8 @@ import BlogPostPreview from "./routes/admin/preview/blog-post-preview";
 import CaseStudyEditor from "./routes/admin/case-study-editor/case-study-editor.component";
 import Leads from "./routes/leads/leads.component";
 import CaseStudyPreivew from "./routes/admin/preview/case-study-preview.component";
+import AllBlogs from "./routes/admin/all-blogs";
+import EditBlog from "./routes/admin/edit-blog";
 // import SellerCreateOrder from "./routes/seller/seller-create-order/seller-create-order.component";
 
 library.add(fas);
@@ -62,6 +64,22 @@ function App() {
         element={
           <ProtectedRoute>
             <BlogPostPreview />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/all-blogs"
+        element={
+          <ProtectedRoute>
+            <AllBlogs />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/edit-blogs/*"
+        element={
+          <ProtectedRoute>
+            <EditBlog />
           </ProtectedRoute>
         }
       />

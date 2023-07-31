@@ -1,11 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faCat,
   faChevronDown,
-  faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import MainLogo from "../../assets/sf-white.png";
+import MainLogo from "../../assets/saiyed-farhan_logo.png";
 import MainLogo2 from "../../assets/sf-black.png";
 import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";

@@ -99,16 +99,57 @@ async function postBlog(blogDetails, callback) {
   })
 }
 
-// async function getAllBlogs(callback) {
-//   let sql = `SELECT * FROM blogs`
-//   db.query(sql, function(err, result) {
-//     if (err) {
-//       callback(err, null)
-//     } else {
-//       callback(null, result)
-//     }
-//   })
-// }
+async function getAllBlogs(callback) {
+  let sql = `SELECT BlogId, Title FROM blogs WHERE IsDeleted = ${0}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function getBlogById(blogId, callback) {
+  let sql = `SELECT * FROM blogs WHERE IsDeleted = ${0} AND BlogId = ${blogId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function updateBlog(blogId, blogDetails, callback) {
+  const {Categories} = blogDetails;
+  let CategoriesStringfy = JSON.stringify(Categories);
+  let sql = `UPDATE blogs SET ? WHERE BlogId = ${blogId}`;
+  db.query(sql, {...blogDetails, Categories: CategoriesStringfy}, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true,
+      })
+    }
+  })
+}
+
+async function deleteBlogById(blogId, callback) {
+  let sql = `UPDATE blogs SET IsDeleted = ${1} WHERE BlogId = ${blogId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true
+      })
+    }
+  })
+}
+
+
 
 //case studies
 async function postCaseStudy(caseStudyDetails, callback) {
@@ -168,7 +209,10 @@ module.exports = {
   createAdminAccount,
   loginInAdmin,
   postBlog,
-  // getAllBlogs,
+  getBlogById,
+  getAllBlogs,
+  updateBlog,
+  deleteBlogById,
   postCaseStudy,
   // getAllCaseStudies,
   getAllCustomers,

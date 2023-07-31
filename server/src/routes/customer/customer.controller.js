@@ -194,6 +194,7 @@ async function httpGetTestitmonials (req, res) {
       _limit: 5,
     },
 });
+console.log(response.data)
   const data = response.data.result;
   console.log({data})
   if (data) {

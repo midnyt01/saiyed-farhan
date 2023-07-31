@@ -8,6 +8,7 @@ import { AdminAuthProvider } from "./context/admin/auth.context";
 import { CustomersProvider } from "./context/admin/customers.context";
 import { AdminNotificationsProvider } from "./context/admin/admin-notifications.context";
 import { EditorPorvider } from "./context/admin/editor.context";
+import { BlogsPorvider } from "./context/admin/blogs.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,9 +18,11 @@ root.render(
       <AdminAuthProvider>
         <AdminNotificationsProvider>
           <EditorPorvider>
-            <CustomersProvider>
-              <App />
-            </CustomersProvider>
+            <BlogsPorvider>
+              <CustomersProvider>
+                <App />
+              </CustomersProvider>
+            </BlogsPorvider>
           </EditorPorvider>
         </AdminNotificationsProvider>
       </AdminAuthProvider>

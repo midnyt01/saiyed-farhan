@@ -24,6 +24,12 @@ export const NavList = [
       Icon: 'fa-laptop-code'
     },
     {
+      Id: 13,
+      Title: 'All Blogs',
+      Link : '/all-blogs',
+      Icon: 'fa-laptop-code'
+    },
+    {
       Id: 5,
       Title: 'Case Study Editor',
       Link : '/create-case-study',
