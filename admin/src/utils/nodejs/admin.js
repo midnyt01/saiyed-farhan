@@ -1,4 +1,4 @@
-const API = 'https://api.saiyedfarhan.com';
+const API = 'https://api.saiyedfarhan.com/admin';
 
 
 async function httpCreateAdmin (adminCred) {
