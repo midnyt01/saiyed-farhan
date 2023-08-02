@@ -11,6 +11,9 @@ const {
   updateBlog,
   deleteBlogById,
   getBlogById,
+  getCaseStudyById,
+  updateCaseStudy,
+  deleteCaseStudyById,
 } = require("../../models/admin.model");
 
 async function httpCreateAdminAccount(req, res) {
@@ -96,15 +99,47 @@ async function httpPostCaseStudy(req, res) {
   })
 }
 
-// async function httpGetAllCaseStudies (req, res) {
-//   await getAllCaseStudies(function(err, data) {
-//     if (err) {
-//       res.status(400).json(err)
-//     } else {
-//       res.status(200).json(data)
-//     }
-//   })
-// }
+async function httpGetCaseStudyById (req, res) {
+  let casestudyId = req.params.id
+  await getCaseStudyById(casestudyId, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpGetAllCaseStudies (req, res) {
+  await getAllCaseStudies(function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+async function httpUpdateCaseStudy(req, res) {
+  let casestudyId = req.params.id;
+  await updateCaseStudy(casestudyId, req.body, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpDeleteCaseStudy(req, res) {
+  let casestudyId = req.params.id
+  await deleteCaseStudyById(casestudyId, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data);
+    }
+  })
+}
 
 //customers
 
@@ -143,13 +178,19 @@ async function httpUploadCaseStudyCoverImage (req, res) {
 module.exports = {
   httpCreateAdminAccount,
   httpLoginAdmin,
+  
   httpPostBlog,
   httpGetBlogById,
   httpGetAllBlogs,
   httpUpdateBlog,
   httpDeleteBlog,
+
   httpPostCaseStudy,
-  // httpGetAllCaseStudies,
+  httpGetCaseStudyById,
+  httpGetAllCaseStudies,
+  httpUpdateCaseStudy,
+  httpDeleteCaseStudy,
+
   httpGetAllCustomers,
   httpGetAllLeads,
   httpUploadBlogCoverImage,

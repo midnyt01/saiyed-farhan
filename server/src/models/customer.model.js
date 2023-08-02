@@ -151,7 +151,7 @@ async function CreateBlogPostByCustomer(blogDetails, callback) {
 }
 
 async function getAllBlogs(callback) {
-  let sql = `SELECT * FROM blogs WHERE IsDeleted = ${0}`;
+  let sql = `SELECT * FROM blogs WHERE IsDeleted = ${0} ORDER BY BlogId DESC`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);
@@ -223,7 +223,7 @@ async function postReplyOnBlogComment (replyDetails, callback) {
 }
 
 async function getAllCaseStudies(callback) {
-  let sql = 'SELECT * FROM case_studies';
+  let sql = `SELECT * FROM case_studies WHERE IsDeleted = ${0} ORDER BY BlogId DESC`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);
@@ -234,7 +234,7 @@ async function getAllCaseStudies(callback) {
 }
 
 async function getCaseStudyById(Id, callback) {
-  let sql = `SELECT * FROM case_studies WHERE CaseStudyId = ${Id}`;
+  let sql = `SELECT * FROM case_studies WHERE CaseStudyId = ${Id} AND IsDeleted = ${0}`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);

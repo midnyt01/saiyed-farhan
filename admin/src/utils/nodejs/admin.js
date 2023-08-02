@@ -1,4 +1,5 @@
 const API = 'https://api.saiyedfarhan.com/admin';
+// const API = 'http://localhost:8000/admin';
 
 
 async function httpCreateAdmin (adminCred) {

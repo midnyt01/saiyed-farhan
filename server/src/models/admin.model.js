@@ -100,7 +100,7 @@ async function postBlog(blogDetails, callback) {
 }
 
 async function getAllBlogs(callback) {
-  let sql = `SELECT BlogId, Title FROM blogs WHERE IsDeleted = ${0}`
+  let sql = `SELECT BlogId, Title FROM blogs WHERE IsDeleted = ${0} ORDER BY BlogId DESC`
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null)
@@ -167,16 +167,57 @@ async function postCaseStudy(caseStudyDetails, callback) {
   })
 }
 
-// async function getAllCaseStudies(callback) {
-//   let sql = `SELECT * FROM case_studies`
-//   db.query(sql, function(err, result) {
-//     if (err) {
-//       callback(err, null)
-//     } else {
-//       callback(null, result)
-//     }
-//   })
-// }
+
+async function getAllCaseStudies(callback) {
+  let sql = `SELECT CaseStudyId, Title FROM case_studies WHERE IsDeleted = ${0} ORDER BY CaseStudyId DESC`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function getCaseStudyById(casestudyId, callback) {
+  let sql = `SELECT * FROM case_studies WHERE IsDeleted = ${0} AND CaseStudyId = ${casestudyId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function updateCaseStudy(casestudyId, casestudyDetails, callback) {
+  const {Categories} = casestudyDetails;
+  let CategoriesStringfy = JSON.stringify(Categories);
+  let sql = `UPDATE case_studies SET ? WHERE CaseStudyId = ${casestudyId}`;
+  db.query(sql, {...casestudyDetails, Categories: CategoriesStringfy}, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true,
+      })
+    }
+  })
+}
+
+async function deleteCaseStudyById(casestudyId, callback) {
+  let sql = `UPDATE case_studies SET IsDeleted = ${1} WHERE CaseStudyId = ${casestudyId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true
+      })
+    }
+  })
+}
+
 
 
 //leads and customers
@@ -208,13 +249,19 @@ async function getAllLeadsInfo (callback) {
 module.exports = {
   createAdminAccount,
   loginInAdmin,
+
   postBlog,
   getBlogById,
   getAllBlogs,
   updateBlog,
   deleteBlogById,
+
   postCaseStudy,
-  // getAllCaseStudies,
+  getAllCaseStudies,
+  getCaseStudyById,
+  updateCaseStudy,
+  deleteCaseStudyById,
+
   getAllCustomers,
   getAllLeadsInfo,
 };

@@ -18,6 +18,9 @@ const {
   httpUpdateBlog,
   httpDeleteBlog,
   httpGetBlogById,
+  httpGetCaseStudyById,
+  httpUpdateCaseStudy,
+  httpDeleteCaseStudy,
 } = require("./admin.controller");
 
 const adminRouter = express.Router();
@@ -47,14 +50,17 @@ adminRouter.post("/login", httpLoginAdmin);
 adminRouter.post("/blogcoverimage", upload.single('file'), httpUploadBlogCoverImage);
 adminRouter.post("/blogs", fetchAdmin, httpPostBlog);
 adminRouter.get("/blogs", fetchAdmin, httpGetAllBlogs);
-adminRouter.get("/blogs/:id", fetchAdmin, httpGetBlogById)
+adminRouter.get("/blogs/:id", fetchAdmin, httpGetBlogById);
 adminRouter.put("/blogs/:id", fetchAdmin, httpUpdateBlog);
-adminRouter.put("/delete-blog/:id", fetchAdmin, httpDeleteBlog)
+adminRouter.put("/delete-blog/:id", fetchAdmin, httpDeleteBlog);
 
 //case study
 adminRouter.post("/casecoverimage", upload.single('file'), httpUploadBlogCoverImage);
 adminRouter.post("/casestudies", fetchAdmin, httpPostCaseStudy);
-// adminRouter.get("/casestudies", fetchAdmin, httpGetAllCaseStudies);
+adminRouter.get("/casestudies", fetchAdmin, httpGetAllCaseStudies);
+adminRouter.get("/casestudies/:id", fetchAdmin, httpGetCaseStudyById);
+adminRouter.put("/casestudies/:id", fetchAdmin, httpUpdateCaseStudy);
+adminRouter.put("/delete-casestudy/:id", fetchAdmin, httpDeleteCaseStudy);
 
 
 //customers 
