@@ -120,7 +120,7 @@ const CaseStudyPreivew = () => {
         console.log(formData)
         //if cover image form is from blog then do this
         try {
-            let response = await fetch('http://localhost:8000/admin/casecoverimage', {
+            let response = await fetch('https://api.saiyedfarhan.com/admin/casecoverimage', {
                 method: 'POST',
                 body: formData
               })

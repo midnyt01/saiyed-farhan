@@ -170,7 +170,7 @@ const BlogPostPreview = () => {
         console.log(formData)
         //if cover image form is from blog then do this
         try {
-            let response = await fetch('http://localhost:8000/admin/blogcoverimage', {
+            let response = await fetch('https://api.saiyedfarhan.com/admin/blogcoverimage', {
                 method: 'POST',
                 body: formData
               })
