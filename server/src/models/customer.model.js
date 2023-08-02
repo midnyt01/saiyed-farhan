@@ -223,7 +223,7 @@ async function postReplyOnBlogComment (replyDetails, callback) {
 }
 
 async function getAllCaseStudies(callback) {
-  let sql = `SELECT * FROM case_studies WHERE IsDeleted = ${0} ORDER BY BlogId DESC`;
+  let sql = `SELECT * FROM case_studies WHERE IsDeleted = ${0} ORDER BY CaseStudyId DESC`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);
