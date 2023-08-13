@@ -71,13 +71,15 @@ export const BlogsPorvider = ({ children }) => {
 
     useEffect(() => {
       const getBlogInfo = async () => {
-        let response = await httpGetBlogById(currentBlog);
-        const {BlogId, MetaTitle, MetaDescription, Title, Content, Categories} = response[0];
-        setBlogTitle(Title);
-        setBlogMetaTitle(MetaTitle);
-        setBlogMetaDescription(MetaDescription);
-        setBlogContent(Content);
-        setBlogCategories(JSON.parse(Categories));
+        if (currentBlog !== null) {
+          let response = await httpGetBlogById(currentBlog);
+          const {BlogId, MetaTitle, MetaDescription, Title, Content, Categories} = response[0];
+          setBlogTitle(Title);
+          setBlogMetaTitle(MetaTitle);
+          setBlogMetaDescription(MetaDescription);
+          setBlogContent(Content);
+          setBlogCategories(JSON.parse(Categories));
+        }
       }
       getBlogInfo();
     }, [currentBlog])

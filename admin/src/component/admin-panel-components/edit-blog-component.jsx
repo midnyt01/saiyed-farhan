@@ -143,7 +143,7 @@ var toolbarOptions = [
   ["bold", "italic", "underline", "strike"],
   [{ color: [] }, { background: [] }],
   [{ script: "sub" }, { script: "super" }],
-  [{ header: 1 }, { header: 2 }],
+  [{ header: 1 }, { header: 2 }, { header: 3}, {header: 4}, {header: 5}, {header: 6}],
   ["blockquote", "code-block"],
   [{ list: "ordered" }, { list: "bullet" }],
   [{ indent: "-1" }, { indent: "+1" }],
@@ -161,7 +161,28 @@ const modules = {
   },
 };
 
+
+
 const EditBlogComponent = () => {
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", "16");
+    svg.setAttribute("height", "16");
+    svg.setAttribute("fill", "currentColor");
+    svg.setAttribute("class", "bi bi-type-h3");
+    svg.setAttribute("viewBox", "0 0 16 16");
+  
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "... SVG path data ...");
+    svg.appendChild(path);
+  
+    const spanElement = document.querySelector(".ql-formats");
+    const thirdButton = spanElement.querySelector('button.ql-header[value="3"]');
+  
+    spanElement.insertBefore(svg, thirdButton.nextSibling);
+  });
+  
     const navigate = useNavigate();
   
     

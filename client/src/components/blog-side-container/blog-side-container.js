@@ -82,13 +82,15 @@ const BlogSideContainer = () => {
   const [newRecents, setNewRecents] = useState([]);
 
   useEffect(() => {
-    if (recentBlogs.length != 0) {
-      let blogArray = [];
-      for (let i = 0; i < 4; i++) {
-        blogArray.push(recentBlogs[i]);
-      }
-      setNewRecents(blogArray);
-    }
+    // if (recentBlogs.length != 0) {
+    //   let blogArray = [];
+    //   for (let i = 0; i < 4 || recentBlogs.length; i++) {
+    //     blogArray.push(recentBlogs[i]);
+    //   }
+    //   console.log({blogArray})
+    //   setNewRecents(blogArray);
+    // }
+    setNewRecents(recentBlogs);
   }, [recentBlogs]);
 
   return (

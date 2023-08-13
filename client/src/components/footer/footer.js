@@ -144,7 +144,7 @@ const Footer = () => {
                     <LinkItem href="/casestudies"> Case Studies</LinkItem>
                     <LinkItem href="/blogs"> Blogs</LinkItem>
                     <LinkItem href="digital-marketing-services/branding"> Services</LinkItem>
-                    <LinkItem href="/"> Contact Me</LinkItem>
+                    <LinkItem href="/contact-me"> Contact Me</LinkItem>
                 </SectionWrapper>
 
                 <SectionWrapper>
