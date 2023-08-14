@@ -34,7 +34,7 @@ const Message = styled.div`
 const defaultFormFields = {
   FirstName: "",
   LastName: "",
-  Email: "",
+  Username: "",
   Password: "",
   Confirm_Password: "",
 };
@@ -52,12 +52,12 @@ const AdminCreateAccountForm = () => {
     initialValues: defaultFormFields,
     validationSchema: RegistrationSchema,
     onSubmit : async (values) => {
-      const {FirstName, LastName, Email, Password} = values;
+      const {FirstName, LastName, Username, Password} = values;
 
         //will be done after connecting to backend
 
         setRegistrationMessage({success: false, message: ""});
-        const data = await httpCreateAdmin({FirstName, LastName, Email, Password})
+        const data = await httpCreateAdmin({FirstName, LastName, Username, Password})
         if (data.success) {
         //save auth token and redirct to home
             setRegistrationMessage({success: true, message: "New admin account created successfully"})
@@ -127,16 +127,16 @@ const AdminCreateAccountForm = () => {
                 <TextField
                   required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="Email"
-                  autoComplete="email"
-                  type="email"
-                  value={values.Email}
+                  id="username"
+                  label="Username"
+                  name="Username"
+                  autoComplete="username"
+                  type="text"
+                  value={values.Username}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  error={touched.Email && Boolean(errors.Email)}
-                  helperText={touched.Email && errors.Email}
+                  error={touched.Username && Boolean(errors.Username)}
+                  helperText={touched.Username && errors.Username}
                 />
               </Grid>
               <Grid item xs={12}>

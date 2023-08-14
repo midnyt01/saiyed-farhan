@@ -46,7 +46,7 @@ export default function Home() {
         }}
       />
       <HeroBanner />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Services />
       {/* <CaseStudies /> */}
       <Featured />

@@ -32,7 +32,7 @@ async function createAdminAccount(adminDetails, callback) {
               let data = {
                 admin: {
                   AdminId: result.insertId,
-                  PhoneNumber: adminDetails.PhoneNumber,
+                  Email,
                   isAdmin: true,
                 },
               };

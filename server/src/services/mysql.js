@@ -6,7 +6,7 @@ const db = mysql.createPool({
     user:'u391245239_sf_root',
     password:'Classvoid29',
     database: 'u391245239_sf_database',
-    connectionLimit: 200 
+    connectionLimit: 200,
 })
 
 

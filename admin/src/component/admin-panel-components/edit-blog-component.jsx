@@ -165,23 +165,23 @@ const modules = {
 
 const EditBlogComponent = () => {
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("width", "16");
-    svg.setAttribute("height", "16");
-    svg.setAttribute("fill", "currentColor");
-    svg.setAttribute("class", "bi bi-type-h3");
-    svg.setAttribute("viewBox", "0 0 16 16");
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  //   svg.setAttribute("width", "16");
+  //   svg.setAttribute("height", "16");
+  //   svg.setAttribute("fill", "currentColor");
+  //   svg.setAttribute("class", "bi bi-type-h3");
+  //   svg.setAttribute("viewBox", "0 0 16 16");
   
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", "... SVG path data ...");
-    svg.appendChild(path);
+  //   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  //   path.setAttribute("d", "... SVG path data ...");
+  //   svg.appendChild(path);
   
-    const spanElement = document.querySelector(".ql-formats");
-    const thirdButton = spanElement.querySelector('button.ql-header[value="3"]');
+  //   const spanElement = document.querySelector(".ql-formats");
+  //   const thirdButton = spanElement.querySelector('button.ql-header[value="3"]');
   
-    spanElement.insertBefore(svg, thirdButton.nextSibling);
-  });
+  //   spanElement.insertBefore(svg, thirdButton.nextSibling);
+  // });
   
     const navigate = useNavigate();
   

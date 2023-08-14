@@ -121,7 +121,7 @@ const Testimonials = () => {
       console.log({response})
       setAllTestimonials(response);
     }
-    getTestimonialArray();
+    // getTestimonialArray();
   }, [])
 
   const handleScrollLeft = (scrollToLeft) => {let scrollAmount = 0;
