@@ -1,14 +1,14 @@
 import * as Yup from 'yup';
 
 export const LoginSchema = Yup.object({
-    Username: Yup.string().required('Required'),
+    Email: Yup.string().email('Invalid email address').required('Required'),
     Password: Yup.string().min(6).required("please enter your password")
 })
 
 export const RegistrationSchema = Yup.object({
     FirstName: Yup.string().min(2).max(25).required('please enter your first name'),
     LastName: Yup.string().min(2).max(25).required('please enter your last name'),
-    Username: Yup.string().min(3).required('Required'),
+    Email: Yup.string().email('Invalid email address').required('Required'),
     Password: Yup.string().min(6).required("please enter your password"),
     Confirm_Password: Yup.string().required('please enter you password').oneOf([Yup.ref("Password"), null], "Password must match"),
 });

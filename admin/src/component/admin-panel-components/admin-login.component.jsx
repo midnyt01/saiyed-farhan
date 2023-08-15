@@ -39,7 +39,7 @@ const FailedMessage = styled.div`
 
 
 const defaultFormFields = {
-    Username: '',
+    Email: '',
     Password: ''
 }
 
@@ -92,16 +92,16 @@ const AdminLoginForm = () => {
                 margin="normal"
                 required
                 fullWidth
-                id="Username"
-                label="Username"
-                name="Username"
-                autoComplete="username"
-                type="text"
-                value={values.Username}
+                id="Email"
+                label="Email Address"
+                name="Email"
+                autoComplete="email"
+                type="email"
+                value={values.Email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                error={touched.Username && Boolean(errors.Username)}
-                helperText={touched.Username && errors.Username}
+                error={touched.Email && Boolean(errors.Email)}
+                helperText={touched.Email && errors.Email}
               />
               <TextField
                 margin="normal"
