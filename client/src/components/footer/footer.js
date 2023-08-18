@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MainLogo from "../../assets/sf-white.png"
+import MainLogo from "../../assets/2.png"
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
@@ -35,10 +35,19 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 800px) { 
+        width: 100%;
+     }
 
 `;
 
-const LogoContainer = styled.div``;
+const LogoContainer = styled.div`
+    @media (max-width: 800px) {    
+        width: 100%;
+        margin: auto;
+        text-align:center;
+    }
+`;
 
 const LogoTitle = styled.div`
     font-size: 25px;
@@ -66,6 +75,8 @@ const ExtraLinksContainer = styled.div`
 const SectionWrapper = styled.div``;
 const NewsletterWrapper = styled.div`
         grid-column: 1 / 3;
+        width: 100%;
+        margin: auto;
     @media (min-width: 800px) {
         grid-column: unset;
     }
@@ -94,10 +105,11 @@ const NewsletterInput = styled.input`
     padding: 5px;
     background: transparent;
     color: white;
-    margin-top: 5px;
+    margin: 5px auto;
+    padding: 12px;
     width:70%;
     @media (min-width: 800px) {
-        width: 100%;
+        width: 98%;
         margin-top: 15px;
     }
 `;
@@ -105,8 +117,8 @@ const NewsletterInput = styled.input`
 const NewsletterSubmit = styled.button`
     border: none;
     box-sizing: border-box;
-    padding: 5px 25px;
-    margin-top: 15px;
+    padding: 10px 35px;
+    margin: 15px auto;
     font-weight: 400;
     letter-spacing: 0.8px;
 `;
@@ -131,9 +143,8 @@ const Footer = () => {
                 <LogoContainer>
                     <Image src={MainLogo} alt="saiyed farhan" width={100} />
                     <LogoTitle>Saiyed<br /> Farhan</LogoTitle>
-                    <LinkItem href=""> 
+                    <LinkItem href="tel:+918767609584"> 
                     Online Markting Consultant +91-8767609584
-
                     </LinkItem>
                 </LogoContainer>
             </MainContainer>

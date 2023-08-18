@@ -1,15 +1,12 @@
 import HeroImg from "../../assets/marketing_funnels_1.webp";
 import HeroImg1 from "../../assets/IIMK-ASMP-1140x900.jpg";
 import HeroImg2 from "../../assets/The-Role-of-Marketing-1.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "styled-components";
-import Head from "next/head";
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Link from "next/link";
 import Image from "next/image";
 import { Slide } from "react-reveal";
 
@@ -32,13 +29,9 @@ const Wrapper = styled.div`
 `;
 const SliderContainer = styled.div`
     width: 350px;
+    box-sizing: border-box;
     border-radius: 12px;
-    margin: auto;
     margin-top: 50px;
-    @media (min-width: 800px) {
-        // margin: 0;
-        margin-top: 50px;
-    }
 `;
 const HeroBannerContainer = styled.div`
   width: 100%;
@@ -91,14 +84,14 @@ const settings = {
   arrows: false,
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 600,
   slidesToShow: 1,
   slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
   autoplaySpeed: 3000,
   cssEase: "ease",
-  draggable: true,
+  draggable: false,
   fade: false,
   focusOnSelect: false,
   pauseOnHover: true,

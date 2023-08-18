@@ -8,6 +8,7 @@ const Container = styled.div`
   width: 90%;
   margin: auto;
   margin-top: 120px;
+  box-sizing: border-box;
 `;
 
 const Wrapper = styled.div`
@@ -40,7 +41,7 @@ const Heading = styled.h1`
 const ImageContainer = styled.div`
   flex: 4;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 30px;
   margin-top: 50px;
   @media (min-width: 800px) {
