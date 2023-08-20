@@ -8,6 +8,12 @@ import Topbar from '../../../component/admin-panel-components/admin-topbar/topba
 import { EditorContext } from '../../../context/admin/editor.context'
 import { httpPostBlog } from '../../../utils/nodejs/admin'
 
+function getCurrentDateInSeconds() {
+    const currentDate = new Date();
+    const seconds = Math.floor(currentDate.getTime() / 1000);
+    return seconds;
+}
+
 const MONTHSMAP = {  0: "Jan",
 1: "Feb",
 2: "Mar",
@@ -190,8 +196,7 @@ const BlogPostPreview = () => {
 
     const handlePublish = async () => {
 
-        let date = new Date();
-        let CreatedAt = date.getTime();
+        let CreatedAt = getCurrentDateInSeconds();
         let ImageUrl = await handleSubmit();
         let blogDetails = {
             MetaTitle : blogMetaTitle,
