@@ -14,6 +14,16 @@ function getCurrentDateInSeconds() {
     return seconds;
 }
 
+function formatString(inputString) {
+    // Make the string lowercase
+    const lowercaseString = inputString.toLowerCase();
+  
+    // Replace spaces with hyphens
+    const formattedString = lowercaseString.replace(/\s+/g, '-');
+  
+    return formattedString;
+}
+
 const MONTHSMAP = {  0: "Jan",
 1: "Feb",
 2: "Mar",
@@ -197,6 +207,7 @@ const BlogPostPreview = () => {
     const handlePublish = async () => {
 
         let CreatedAt = getCurrentDateInSeconds();
+        let Url = formatString(blogTitle);
         let ImageUrl = await handleSubmit();
         let blogDetails = {
             MetaTitle : blogMetaTitle,
@@ -207,7 +218,8 @@ const BlogPostPreview = () => {
             Categories: blogCategories,
             Author: 'Saiyed Farhan',
             CreatedAt,
-            ReadTime: readTime
+            ReadTime: readTime,
+            Url
         }
         let response = await httpPostBlog(blogDetails)
         if (response.success) {

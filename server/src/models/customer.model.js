@@ -161,8 +161,8 @@ async function getAllBlogs(callback) {
   })
 }
 
-async function getBlogById(Id, callback) {
-  let sql = `SELECT * FROM blogs WHERE BlogId = ${Id}`;
+async function getBlogById(blogUrl, callback) {
+  let sql = `SELECT * FROM blogs WHERE Url = '${blogUrl}'`;
   db.query(sql, function(err, result) {
     if (err) {
       callback(err, null);

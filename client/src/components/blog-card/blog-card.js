@@ -87,14 +87,14 @@ const HR = styled.hr`
 
 
 const BlogCard = ({blog}) => {
-    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime} = blog;
+    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime, Url} = blog;
     const newCategory = JSON.parse(Categories);
     const { date, month } = convertUnixToDM(CreatedAt);
 
     const router = useRouter();
 
     const handleOnClick = () => {
-        router.push(`/blogs/${BlogId}`)
+        router.push(`/blogs/${Url}`)
     }
 
 
