@@ -13,7 +13,6 @@ const Container = styled.div`
     width: 90%;
     margin: auto;
     margin-top: 50px;
-    cursor: pointer;
 `
 
 const Wrapper = styled.div`
@@ -22,13 +21,13 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h3`
-font-size: 22px;
-line-height: 1.5;
-text-transform: uppercase;
-text-decoration: underline;
-text-align: center;
-font-weight: 600;
-letter-spacing: 1px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
 `;
 
 const PopularBlogsContainer = styled.div`

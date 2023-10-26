@@ -56,7 +56,7 @@ const SaiyedFarhan = () => {
   return (
     <>
     <Head>
-    <meta name="robots" content="noindex,nofollow"></meta>
+      <meta name="robots" content="noindex, nofollow" />
     </Head>
     <Container>
         <Heading>Saiyed Farhan</Heading>

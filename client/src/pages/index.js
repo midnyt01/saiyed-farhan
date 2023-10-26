@@ -12,9 +12,9 @@ import { useContext, useEffect } from "react";
 import { Global } from "@emotion/react";
 import { GlobalContext } from "@/context/global.context";
 
-const metaKeywords = "a blog site by siayed farhan, powerd by next js";
+const metaKeywords = "a blog site by Saiyed Farhan, powerd by next js";
 const metaDesc =
-  "a blogsite on digital marketing by saiyed farhan marketing correctely";
+  "a blogsite on digital marketing by Saiyed Farhan- marketing correctely";
 
 export default function Home() {
 
@@ -38,6 +38,7 @@ export default function Home() {
           content="Elevate your online presence with me - Expert Digital Marketing Consultant. Drive traffic, and increase leads and sales. Get in touch now."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <noscript

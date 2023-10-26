@@ -39,14 +39,14 @@ margin-top: 20px;
 
 const MiniBlogCard = ({blog}) => {
     
-    const {BlogId, ImageUrl, Title, CreatedAt, ReadTime,Url} = blog;
+    const {BlogId, ImageUrl, Title, CreatedAt, ReadTime} = blog;
     
     const { date, month } = convertUnixToDM(CreatedAt);
 
     const router = useRouter();
 
     const handleOnClick = () => {
-        router.push(`/blogs/${Url}`)
+        router.push(`/blogs/${BlogId}`)
     }
 
 

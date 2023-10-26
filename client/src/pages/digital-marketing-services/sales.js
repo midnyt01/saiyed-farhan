@@ -21,9 +21,10 @@ const SalesPage = () => {
     <>
     <Head>
       <title>Online Sales -  Data-Oriented Digital Marketing Service</title>
-      <meta name="description" content=" Increase your sales and revenue by availing the best and data-oriented  digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
+      <meta name="description" content=" Increase your sales and revenue by availing the best and data-oriented  digital marketing services. Stand out from the competition and attract your target audience. Contact me today!" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
+      <meta name="robots" content="index, follow" />
     </Head>
       <Container>
       <SalesComponent />

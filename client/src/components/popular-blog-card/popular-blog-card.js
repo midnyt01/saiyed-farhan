@@ -1,15 +1,16 @@
 import { convertUnixToDM } from "@/helper-functions";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
     width: 100%;
     background-color:rgb(26, 26, 26);
     color: white;
+    cursor: pointer;
     img {
         width: 100%;
-        height: 180px;
+        height: 100%;
     }
 `;
 
@@ -19,6 +20,7 @@ const Wrapper = styled.div`
 
 const ImageContainer = styled.div`
     width: 100%;
+    height: 100%;
 `
 
 const BodyContainer = styled.div`
@@ -38,24 +40,23 @@ const ContentBody = styled.p`
 `
 
 const InfoContainer = styled.div`
-width: 100%;
-display: flex;
-justify-content: flex-start;
-column-gap: 15px;
-align-items: center;
-margin-top: 20px;
-box-sizing: border-box;
-/* padding-right: 40px; */
-font-size: 16px;
-flex-wrap: wrap;
-row-gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    flex-wrap: wrap;
+    row-gap: 10px;
 `;
 
 const CategoryType = styled.div`
-padding: 3px 10px;
-border: 1px solid white;
-border-radius: 5px;
-text-transform: capitalize;
+    padding: 3px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-transform: capitalize;
 `;
 
 const Date = styled.div``;
@@ -74,21 +75,21 @@ const AuthorName = styled.div`
 `
 
 const PopularBlogCard = ({blog}) => {
-    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime, Url} = blog;
+    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime} = blog;
     const newCategory = JSON.parse(Categories);
     const { date, month } = convertUnixToDM(CreatedAt);
 
     const router = useRouter();
 
     const handleOnClick = () => {
-        router.push(`/blogs/${Url}`)
+        router.push(`/blogs/${BlogId}`)
     }
 
   return (
     <Container onClick={handleOnClick}>
         <Wrapper>
             <ImageContainer>
-                <Image src={`${ImageUrl}`} alt="hwll" width={100} height={100} />
+                <Image src={`${ImageUrl}`} alt="Blog image" width={100} height={100} />
             </ImageContainer>
             <BodyContainer>
                 <ContentTitle>

@@ -26,7 +26,8 @@ const LeadsPage = () => {
           name="description"
           content="Generate more leads by availing the best and proven digital marketing strategies. Stand out from the competition and attract your target audience. Contact us today!"
         />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>

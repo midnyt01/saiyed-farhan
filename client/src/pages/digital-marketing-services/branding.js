@@ -23,9 +23,10 @@ const BrandingPage = () => {
     <>
     <Head>
       <title>Branding: Digital Marketing Service - 100% Proven Strategies</title>
-      <meta name="description" content="Transform your business into Brand with my branding service. Stand out from the competition and attract your target audience. Contact us today!" />
+      <meta name="description" content="Transform your business into Brand with my branding service. Stand out from the competition and attract your target audience. Contact me today!" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+      <meta name="robots" content="index, follow" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container>
       <BrandingComponent />

@@ -7,9 +7,10 @@ const Container = styled.div`
     width: 100%;
     background-color:rgb(26, 26, 26);
     color: white;
+    cursor: pointer;
     img {
         width: 100%;
-        height: 200px;
+        height: 100%;
     }
 `;
 
@@ -87,14 +88,14 @@ const HR = styled.hr`
 
 
 const BlogCard = ({blog}) => {
-    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime, Url} = blog;
+    const {BlogId, ImageUrl, Title, MetaDescription, Author, Categories, CreatedAt, ReadTime} = blog;
     const newCategory = JSON.parse(Categories);
     const { date, month } = convertUnixToDM(CreatedAt);
 
     const router = useRouter();
 
     const handleOnClick = () => {
-        router.push(`/blogs/${Url}`)
+        router.push(`/blogs/${BlogId}`)
     }
 
 
@@ -102,7 +103,7 @@ const BlogCard = ({blog}) => {
     <Container>
         <Wrapper>
             <ImageContainer>
-                <Image src={`${ImageUrl}`} alt="hwll" width={100} height={100} />
+                <Image src={`${ImageUrl}`} alt="Blog image" width={100} height={100} />
             </ImageContainer>
             <BodyContainer>
                 <ContentTitle>
