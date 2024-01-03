@@ -101,11 +101,12 @@ async function httpGetAllBlogs(req, res) {
 }
 
 async function httpGetBlogById(req, res) {
-  let blogUrl = req.params.id;
-  await getBlogById(blogUrl, function (err, data) {
+  let Id = req.params.id;
+  await getBlogById(Id, function (err, data) {
     if (err) {
       res.status(400).json(err);
     } else {
+      console.log(data)
       res.status(200).json(data);
     }
   });
