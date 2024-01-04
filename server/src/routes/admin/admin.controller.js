@@ -53,6 +53,7 @@ async function httpGetBlogById (req, res) {
     if (err) {
       res.status(400).json(err)
     } else {
+      console.log('Test', data);
       res.status(200).json(data)
     }
   })
