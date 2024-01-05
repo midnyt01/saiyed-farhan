@@ -23,8 +23,7 @@ const TrafficPage = () => {
     <title> Increase Website Traffic - Digital Marketing ServiceProven Strategies</title>
       <meta name="description" content=" Increase your website traffic by availing the best and proven digital marketing services. Stand out from the competition and attract your target audience. Contact us today!" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container>
       <TrafficComponent />

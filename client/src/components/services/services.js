@@ -67,7 +67,7 @@ const ServiceCard = styled.div`
 background-color: #282828;
 color: white;
 box-sizing: border-box;
-padding: 50px;
+padding: 32px;
 `;
 
 const ServiceLogo = styled.div`

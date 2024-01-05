@@ -154,7 +154,7 @@ const BlogPost = ({blog}) => {
         </Head>
         <Wrapper>
             <CoverImageContainer>
-                <Image src={ImageUrl} alt="blog cover image" width={100} height={100} />
+                <Image src={ImageUrl} alt="Blog hero image" unoptimized width={100} height={100} />
             </CoverImageContainer>
             <BlogHeadContainer>
                 <BlogHeading>

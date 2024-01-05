@@ -1,6 +1,7 @@
 import { httpGetAllBlogs, httpGetAllCaseStudies } from "@/utils/api";
 import { createContext, useEffect, useState } from "react";
 
+
 export const ContentContext = createContext({
   allBlogs: [],
   allCaseStudies: [],
@@ -53,6 +54,10 @@ export const ContentProvider = ({ children }) => {
     
     setRecentCaseStudies(caseStudyArray);
   }, [allCaseStudies]);
+
+  const findBlogIdByUrl = (blogUrl) => {
+    const blogId = findBlogIdHelper(allBlogs, blogUrl);
+  }
 
 
   const value = {

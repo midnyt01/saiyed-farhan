@@ -41,7 +41,6 @@ const CloseContainer = styled.div`
   position: absolute;
   top: 30px;
   right: 40px;
-  cursor: pointer;
 `;
 
 const MainLogoContainer = styled.div``;

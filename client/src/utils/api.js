@@ -1,4 +1,4 @@
-// const API = 'http://localhost:8000/customer';
+// const API = 'http://localhost:8001/customer';
 const API = 'https://api.saiyedfarhan.com/customer';
 
 
