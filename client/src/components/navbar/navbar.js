@@ -137,21 +137,21 @@ const Navbar = () => {
             <ListItem>
               <Link href="/">Home</Link>
             </ListItem>
-            <ListItem
+            {/* <ListItem
               onClick={toggleServiceCard}
               rot={isServiceCardOpen ? "rotate(-180deg)" : "rotate(0deg)"}
             >
               Services <FontAwesomeIcon icon={faChevronDown} />
-            </ListItem>
+            </ListItem> */}
             {/* <ListItem>
               <Link href="/casestudies">Case Studies</Link>
             </ListItem> */}
             <ListItem>
               <Link href="/blogs">Blogs</Link>
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <Link href="/contact-me">Contact Me</Link>
-            </ListItem>
+            </ListItem> */}
              <ListItem>
               <Link href="/online-marketing-consultant">About</Link>
             </ListItem>

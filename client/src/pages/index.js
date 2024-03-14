@@ -1,16 +1,16 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import AboutMe from "@/components/about-me-short/about-me";
-import CaseStudies from "@/components/case-studies/case-studies";
-import ContactMeForm from "@/components/contact-me-form/contact-me-form";
-import Featured from "@/components/featured/featured";
+// import CaseStudies from "@/components/case-studies/case-studies";
+// import ContactMeForm from "@/components/contact-me-form/contact-me-form";
+// import Featured from "@/components/featured/featured";
 import HeroBanner from "@/components/hero-banner/hero-banner";
 import PopularBlogs from "@/components/popular-blogs/popular-blogs";
-import Services from "@/components/services/services";
-import Testimonials from "@/components/testimonials/testimonials";
+// import Services from "@/components/services/services";
+// import Testimonials from "@/components/testimonials/testimonials";
 import Head from "next/head";
-import { useContext, useEffect } from "react";
-import { Global } from "@emotion/react";
-import { GlobalContext } from "@/context/global.context";
+// import { useContext, useEffect } from "react";
+// import { Global } from "@emotion/react";
+// import { GlobalContext } from "@/context/global.context";
 
 const metaKeywords = "a blog site by siayed farhan, powerd by next js";
 const metaDesc =
@@ -47,9 +47,9 @@ export default function Home() {
       />
       <HeroBanner />
       {/* <Testimonials /> */}
-      <Services />
+      {/* <Services /> */}
       {/* <CaseStudies /> */}
-      <Featured />
+      {/* <Featured /> */}
       <PopularBlogs />
       <AboutMe />
       {/* <ContactMeForm /> */}

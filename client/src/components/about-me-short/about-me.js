@@ -109,7 +109,8 @@ const AboutMe = () => {
     <Container>
       <Wrapper>
         <InfoContainer>
-          <Title>Why You Should Hire Me</Title>
+          {/* <Title>Why You Should Hire Me</Title> */}
+          <Title>Saiyed Farhan- About me</Title>
           <Content>
           As a Digital Marketing Consultant, I bring a wealth of experience and knowledge to the table. I have a proven track record of delivering successful digital marketing campaigns for a variety of businesses and industries. My skills and expertise in areas such as SEO, SEM, SMM, and Content Marketing will help your business reach its full potential online.
           </Content>

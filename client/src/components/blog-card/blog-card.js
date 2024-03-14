@@ -102,7 +102,7 @@ const BlogCard = ({blog}) => {
     <Container>
         <Wrapper>
             <ImageContainer>
-                <Image src={`${ImageUrl}`} alt="hwll" width={100} height={100} />
+                <Image src={`${ImageUrl}`} alt="Blog" unoptimized width={100} height={100} />
             </ImageContainer>
             <BodyContainer>
                 <ContentTitle>

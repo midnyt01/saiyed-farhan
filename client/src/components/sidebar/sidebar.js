@@ -143,15 +143,15 @@ const Sidebar = () => {
           <NavItems onClick={toggleSidebar}>
             <Link href="/">Home</Link>
           </NavItems>
-          <NavItems onClick={toggleSidebar}>
+          {/* <NavItems onClick={toggleSidebar}>
             <Link href="/digital-marketing-services/branding">Services</Link>
-          </NavItems>
+          </NavItems> */}
           <NavItems onClick={toggleSidebar}>
             <Link href="/blogs">Blogs</Link>
           </NavItems>
-          <NavItems onClick={toggleSidebar}>
+          {/* <NavItems onClick={toggleSidebar}>
             <Link href="/contact-me">Contact Me</Link>
-          </NavItems>
+          </NavItems> */}
           <NavItems onClick={toggleSidebar}>
             <Link href="/online-marketing-consultant">About</Link>
           </NavItems>
@@ -171,7 +171,7 @@ const Sidebar = () => {
           </Social>
         </SocialContainer>
         <SidebarCtaButtons>
-          <Link href='/contact'>Request a Quote</Link>
+          {/* <Link href='/contact'>Request a Quote</Link> */}
           <Link href='/contact'>Get Free Consultation</Link>
         </SidebarCtaButtons>
       </Wrapper>
