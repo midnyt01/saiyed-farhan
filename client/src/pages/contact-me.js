@@ -249,6 +249,7 @@ const ContactMePage = () => {
           content="If you have any query or want to discuss anything related to online marketing, feel free to contact!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="imageindex, index, follow, snippet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>

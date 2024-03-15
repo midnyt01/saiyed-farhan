@@ -19,7 +19,7 @@ const CaseStudyPage = (props) => {
   return (
     <>
     <Head>
-    <meta name="robots" content="noindex,nofollow"></meta>
+    <meta name="robots" content="imageindex, index,  follow, snippet" />
     </Head>
     <Container>
       <CaseStudy study={props} />

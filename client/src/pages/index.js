@@ -38,6 +38,7 @@ export default function Home() {
           content="Elevate your online presence with me - Expert Digital Marketing Consultant. Drive traffic, and increase leads and sales. Get in touch now."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="imageindex, index, follow, snippet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <noscript

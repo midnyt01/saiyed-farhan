@@ -35,7 +35,7 @@ const CaseStudies = () => {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex,nofollow" />
+      <meta name="robots" content="imageindex, index,  follow, snippet" />
       </Head>
       <Container>
         <AllCaseStudies />
