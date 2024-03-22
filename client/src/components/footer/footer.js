@@ -154,35 +154,35 @@ const Footer = () => {
                     <LinkItem href="/saiyed-farhan"> About Me</LinkItem>
                     <LinkItem href="/casestudies"> Case Studies</LinkItem>
                     <LinkItem href="/blogs"> Blogs</LinkItem>
-                    <LinkItem href="digital-marketing-services/branding"> Services</LinkItem>
-                    <LinkItem href="/contact-me"> Contact Me</LinkItem>
+                    {/* <LinkItem href="digital-marketing-services/branding"> Services</LinkItem> */}
+                    {/* <LinkItem href="/contact-me"> Contact Me</LinkItem> */}
                 </SectionWrapper>
 
-                <SectionWrapper>
+                {/* <SectionWrapper>
                     <LinkHeader>Services</LinkHeader>
                     <LinkItem href="/digital-marketing-services/branding"> Branding</LinkItem>
                     <LinkItem href="/digital-marketing-services/sales"> Sales</LinkItem>
                     <LinkItem href="/digital-marketing-services/traffic"> Traffic</LinkItem>
                     <LinkItem href="/digital-marketing-services/leads"> Leads</LinkItem>
-                </SectionWrapper>
+                </SectionWrapper> */}
 
-                <SectionWrapper>
+                {/* <SectionWrapper>
                     <LinkHeader>More Servies</LinkHeader>
                     <LinkItem href="/digital-marketing-services/traffic"> LOCAL SEO</LinkItem>
                     <LinkItem href="/digital-marketing-services/traffic"> SERP SEO</LinkItem>
-                </SectionWrapper>
+                </SectionWrapper> */}
 
                 <SectionWrapper>
                     <LinkHeader>Policies</LinkHeader>
                     <LinkItem href="/"> Terms & Conditions</LinkItem>
                 </SectionWrapper>
 
-                <NewsletterWrapper>
+                {/* <NewsletterWrapper>
                     <LinkHeader>Signup for Newsletter</LinkHeader>
                     <NewsletterInput placeholder="Enter Your Email" />
                     <br></br>
                     <NewsletterSubmit>Submit</NewsletterSubmit>
-                </NewsletterWrapper>
+                </NewsletterWrapper> */}
             </ExtraLinksContainer>
         </Wrapper>
         <HR />
